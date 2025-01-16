@@ -1,6 +1,7 @@
 <script>
   import dirtynerd from '$lib/images/extra/dirtynerd.jpg';
   import charlie from '$lib/images/extra/charlie.webp';
+  import chuky from '$lib/images/extra/chuky.jpg';
 </script>
 
 <h1>Extra</h1>
@@ -23,4 +24,9 @@
 <div>Capital Comedy Hour sketches</div>
 <div>Breanne, Owen, Will sketches</div>
 <h2>Podcasts</h2>
+<img src={chuky} alt="Choppin' It up with Chuky" />
+<h3>Choppin' it up with Chuky</h3>
 <h2>Madison Comedy Week</h2>
+<h2>Improv</h2>
+<div>Atlas Improv</div>
+<div>Monkey Business Institute</div>

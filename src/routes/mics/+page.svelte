@@ -2,7 +2,7 @@
   import state from '$lib/images/mics/state.webp';
 </script>
 
-<h1>List of Current Weekly Open Mics:</h1>
+<h1>Weekly Open Mics:</h1>
 <p>
   Stay tuned to the Madison Area Comedy Network Facebook group for updates on new mics,
   pop-up mics, cancellations, and time changes.
