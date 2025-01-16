@@ -1,0 +1,7 @@
+{
+  "plugins": ["prettier-plugin-svelte"],
+  "pluginSearchDirs": ["."],
+  "printWidth": 90,
+  "singleQuote": true,
+  "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+}
