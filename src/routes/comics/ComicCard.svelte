@@ -5,7 +5,7 @@
     <img src={img} alt="Headshot of {name}">
     <h3>{name}</h3>
     <div>{bio}</div>
-    <a href={insta}>Noah's Instagrams</a>
+    <a href={insta}>Instagram</a>
     <div>{email}</div>
     <a href={clip}>Stand-up clip</a>
 </div>
