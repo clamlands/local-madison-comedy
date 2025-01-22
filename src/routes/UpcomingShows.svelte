@@ -96,7 +96,7 @@
   }
 </script>
 
-<h1>Upcoming Shows</h1>
+<h1>Upcoming Madison Comedy Shows</h1>
 {#if curatedEventsArray.length === 0}
   <h2>Loading upcoming shows</h2>
 {/if}

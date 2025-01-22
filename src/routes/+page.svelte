@@ -3,7 +3,6 @@
   import ComicCard from './comics/ComicCard.svelte';
   import noah from '$lib/images/noah-750.webp';
   import eli from '$lib/images/EliWilz-750.webp';
-  import '../home.css';
 
   const featuredComics = [
     {
@@ -27,5 +26,63 @@
   <h1>Local Madison Comedy</h1>
   <p class="tagline">Your guide to Madison's comedy scene</p>
 </div>
-<div>List of all shows from eventbrite sources</div>
 <UpcomingShows />
+
+<style>
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-top: -1rem;
+  }
+
+  /* Quick Links Section */
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Featured Section */
+  .featured {
+    margin-bottom: 3rem;
+  }
+
+  /* About Scene Section */
+  .about-scene {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .venue-highlights {
+    margin-top: 2rem;
+  }
+
+  .venue-highlights ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .venue-highlights li {
+    margin: 1rem 0;
+    line-height: 1.5;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .quick-links {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      padding: 1rem 0;
+    }
+  }
+</style>
