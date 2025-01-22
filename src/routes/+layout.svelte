@@ -19,5 +19,5 @@
 </main>
 
 <footer>
-  <div>Website by Noah Mailloux</div>
+  <div>Website by Noah Mailloux and Eli Wilz</div>
 </footer>

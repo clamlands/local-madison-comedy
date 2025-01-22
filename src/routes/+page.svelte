@@ -1,3 +1,7 @@
+<script>
+  import UpcomingShows from './UpcomingShows.svelte';
+</script>
+
 <h1>Local Madison Comedy</h1>
 <div>Generic info about the scene</div>
 <div>
@@ -5,3 +9,4 @@
   Comedy on State
 </div>
 <div>List of all shows from eventbrite sources</div>
+<UpcomingShows />
