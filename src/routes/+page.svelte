@@ -24,7 +24,7 @@
 
 <div class="hero">
   <h1>Local Madison Comedy</h1>
-  <p class="tagline">Your guide to Madison's thriving comedy scene</p>
+  <p class="tagline">Your guide to Madison's comedy scene</p>
 </div>
 
 <section class="quick-links">
