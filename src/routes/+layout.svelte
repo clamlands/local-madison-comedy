@@ -1,6 +1,7 @@
 <script>
   import '../app.css';
   import '../nav.css';
+  import '../home.css';
   let { children } = $props();
 </script>
 

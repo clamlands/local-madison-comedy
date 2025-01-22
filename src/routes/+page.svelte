@@ -26,63 +26,28 @@
   <h1>Local Madison Comedy</h1>
   <p class="tagline">Your guide to Madison's comedy scene</p>
 </div>
+<section class="quick-links">
+  <a href="/mics" class="quick-link">
+    <h3>Open Mics</h3>
+    <p>Try your hand at stand-up</p>
+  </a>
+  <a href="/shows" class="quick-link">
+    <h3>Shows</h3>
+    <p>Upcoming comedy events</p>
+  </a>
+  <a href="/comics" class="quick-link">
+    <h3>Comics</h3>
+    <p>Meet local performers</p>
+  </a>
+</section>
+<section class="about-scene">
+  <div class="venue-highlights">
+    <h3>Key Venues</h3>
+    <ul>
+      <li><strong>Comedy on State</strong> - Madison's premier comedy club</li>
+      <li><strong>The Rigby</strong> - Weekly open mic for new talent</li>
+      <li><strong>The Argus</strong> - Weekly open mic for new talent</li>
+    </ul>
+  </div>
+</section>
 <UpcomingShows />
-
-<style>
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-  }
-
-  .hero .tagline {
-    font-size: 1.2rem;
-    color: var(--text);
-    margin-top: -1rem;
-  }
-
-  /* Quick Links Section */
-  .quick-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-bottom: 3rem;
-  }
-
-  /* Featured Section */
-  .featured {
-    margin-bottom: 3rem;
-  }
-
-  /* About Scene Section */
-  .about-scene {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .venue-highlights {
-    margin-top: 2rem;
-  }
-
-  .venue-highlights ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .venue-highlights li {
-    margin: 1rem 0;
-    line-height: 1.5;
-  }
-
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .quick-links {
-      grid-template-columns: 1fr;
-    }
-
-    .hero {
-      padding: 1rem 0;
-    }
-  }
-</style>
