@@ -63,8 +63,9 @@
     background-color: var(--text);
     margin-top: -15px;
     width: 100%;
-    padding: 30px 0;
+    padding: 30px;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   .tagline {

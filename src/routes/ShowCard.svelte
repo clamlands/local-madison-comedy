@@ -27,6 +27,10 @@
 </div>
 
 <style>
+  .show-card {
+    margin-bottom: 50px;
+  }
+
   img {
     border-radius: 8px;
   }
@@ -43,6 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-top: 6px;
   }
 
   .to-eventbrite {
@@ -64,12 +69,14 @@
     .card-body {
       line-height: 1.2;
       flex-grow: 1;
+      margin-top: 0;
     }
 
     .show-card {
       display: flex;
       flex-direction: column;
       gap: 6px;
+      margin-bottom: 0;
     }
 
     .to-eventbrite {
