@@ -27,6 +27,10 @@
 </div>
 
 <style>
+  img {
+    border-radius: 8px;
+  }
+
   h3 {
     color: var(--text);
   }
