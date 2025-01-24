@@ -8,27 +8,32 @@
 
 <div class="comic-card">
   <!-- <img src={img} alt="Headshot of {name}" /> -->
-  <img src={`https://drive.google.com/thumbnail?id=${imgId}&sz=w1000`} alt="" />
+  <img
+    src={`https://drive.google.com/thumbnail?id=${imgId}&sz=w1000`}
+    alt=""
+    height="500"
+    width="500"
+  />
   <div class="details">
     <h3>{name}</h3>
     <div>{bio}</div>
     {#if clip}
-      <a href={clip}>Stand-up clip</a>
+      <a href={clip} target="_blank" rel="noreferrer">Stand-up clip</a>
     {/if}
     {#if insta}
-      <a href={insta}>Instagram</a>
+      <a href={insta} target="_blank" rel="noreferrer">Instagram</a>
     {/if}
     {#if facebook}
-      <a href={facebook}>Facebook</a>
+      <a href={facebook} target="_blank" rel="noreferrer">Facebook</a>
     {/if}
     {#if youtube}
-      <a href={youtube}>YouTube</a>
+      <a href={youtube} target="_blank" rel="noreferrer">YouTube</a>
     {/if}
     {#if email}
       <div>Email: {email}</div>
     {/if}
     {#if website}
-      <a href={website}>Website</a>
+      <a href={website} target="_blank" rel="noreferrer">Website</a>
     {/if}
   </div>
 </div>
@@ -38,5 +43,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+  }
+
+  a {
+    color: var(--neon);
   }
 </style>

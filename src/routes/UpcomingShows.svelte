@@ -96,23 +96,25 @@
   }
 </script>
 
-<h1>Upcoming Madison Comedy Shows</h1>
-{#if curatedEventsArray.length === 0}
-  <h2>Loading upcoming shows</h2>
-{/if}
+<section>
+  <h1>Upcoming Madison Comedy Shows</h1>
+  {#if curatedEventsArray.length === 0}
+    <h2>Loading upcoming shows</h2>
+  {/if}
 
-<div class="show-cards">
-  {#each curatedEventsArray as event}
-    <ShowCard
-      graphic={event.graphic}
-      title={event.title}
-      date={event.date}
-      time={event.time}
-      place={event.place}
-      link={event.link}
-    />
-  {/each}
-</div>
+  <div class="show-cards">
+    {#each curatedEventsArray as event}
+      <ShowCard
+        graphic={event.graphic}
+        title={event.title}
+        date={event.date}
+        time={event.time}
+        place={event.place}
+        link={event.link}
+      />
+    {/each}
+  </div>
+</section>
 
 <style>
   @media (min-width: 768px) {

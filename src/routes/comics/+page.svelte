@@ -42,50 +42,50 @@
   onMount(getComics);
 </script>
 
-<h1>Comic Directory</h1>
+<div class="width-container">
+  <section>
+    <h1>Comic Directory</h1>
 
-<!-- DO NOT DELETE: This works. It might fail if there's too many requests though -->
-<!-- <img
-  src="https://drive.google.com/thumbnail?id=1Ysshpf-4OHmpPSdjHB4kJMYYKp_fHzV_&sz=w1000"
-  alt=""
-/> -->
+    <!-- DO NOT DELETE: This works. It might fail if there's too many requests though -->
+    <!-- <img
+      src="https://drive.google.com/thumbnail?id=1Ysshpf-4OHmpPSdjHB4kJMYYKp_fHzV_&sz=w1000"
+      alt=""
+    /> -->
 
-<div class="comic-cards">
-  {#each comicObjectArray as comicObject}
-    <ComicCard
-      img={comicObject.headshot}
-      name={comicObject.name}
-      bio={comicObject.bio}
-      clip={comicObject.clip}
-      insta={comicObject.insta}
-      facebook={comicObject.facebook}
-      youtube={comicObject.youtube}
-      email={comicObject.email}
-      website={comicObject.youtube}
-    />
-  {/each}
+    <div class="comic-cards">
+      {#each comicObjectArray as comicObject}
+        <ComicCard
+          img={comicObject.headshot}
+          name={comicObject.name}
+          bio={comicObject.bio}
+          clip={comicObject.clip}
+          insta={comicObject.insta}
+          facebook={comicObject.facebook}
+          youtube={comicObject.youtube}
+          email={comicObject.email}
+          website={comicObject.youtube}
+        />
+      {/each}
 
-  <!-- <ComicCard
-    img={noah}
-    name="Noah Mailloux"
-    insta="https://www.instagram.com/noahmailloux/"
-    email="noah.mailloux1@gmail.com"
-    clip="https://www.youtube.com/watch?v=FzSgMFVobT0"
-    bio="Noah Mailloux is a Madison, WI based comedian who relates to crowds using his honest and conversational style, with topics ranging from substance abuse and relationships to totally absurd takes on toothbrushes or stacking chairs. He hosts The Revolver Open Mic and produces several monthly showcases with Cheshire Cat Comedy spanning stand-up, improv, and music. He was selected to perform on the Best of the Fest showcase during Madison Comedy Week in 2024. A regular performer at Comedy on State and Comedy Cabin, Noah has opened for nationally recognized headliners including Kevin Bozeman, Chastity Washington, and Julio Diaz."
-  />
-  <ComicCard
-    img={eli}
-    name="Eli Wilz"
-    insta="https://www.instagram.com/eliwilz/"
-    email="eli@sillystreetcomedy.com"
-    clip="https://www.youtube.com/watch?v=iqOCiv-Sn1s"
-    bio="Eli Wilz is a stand-up comedian from Madison, WI. He has opened for comics you have heard of in rooms you think are interesting. He has also opened for comics you haven't heard in rooms that suck. In both scenarios, everyone thinks he did a really good job."
-  /> -->
+      <!-- <ComicCard
+        img={noah}
+        name="Noah Mailloux"
+        insta="https://www.instagram.com/noahmailloux/"
+        email="noah.mailloux1@gmail.com"
+        clip="https://www.youtube.com/watch?v=FzSgMFVobT0"
+        bio="Noah Mailloux is a Madison, WI based comedian who relates to crowds using his honest and conversational style, with topics ranging from substance abuse and relationships to totally absurd takes on toothbrushes or stacking chairs. He hosts The Revolver Open Mic and produces several monthly showcases with Cheshire Cat Comedy spanning stand-up, improv, and music. He was selected to perform on the Best of the Fest showcase during Madison Comedy Week in 2024. A regular performer at Comedy on State and Comedy Cabin, Noah has opened for nationally recognized headliners including Kevin Bozeman, Chastity Washington, and Julio Diaz."
+      />
+      <ComicCard
+        img={eli}
+        name="Eli Wilz"
+        insta="https://www.instagram.com/eliwilz/"
+        email="eli@sillystreetcomedy.com"
+        clip="https://www.youtube.com/watch?v=iqOCiv-Sn1s"
+        bio="Eli Wilz is a stand-up comedian from Madison, WI. He has opened for comics you have heard of in rooms you think are interesting. He has also opened for comics you haven't heard in rooms that suck. In both scenarios, everyone thinks he did a really good job."
+      /> -->
+    </div>
+  </section>
 </div>
 
 <style>
-  iframe {
-    border: none;
-    object-fit: cover;
-  }
 </style>
