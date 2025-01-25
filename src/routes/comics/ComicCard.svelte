@@ -33,7 +33,7 @@
       <div>Email: {email}</div>
     {/if}
     {#if website}
-      <a href={website} target="_blank" rel="noreferrer">Website</a>
+      <a href={website} target="_blank" rel="noreferrer">{website}</a>
     {/if}
   </div>
 </div>

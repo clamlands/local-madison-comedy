@@ -105,7 +105,7 @@
     color: #fff;
     font-size: 6.2rem;
     font-weight: 400;
-    animation: pulsate 1.5s infinite alternate;
+    animation: pulsate 1s infinite alternate;
     border: 0.2rem solid #fff;
     border-radius: 2rem;
     padding: 30px 50px;

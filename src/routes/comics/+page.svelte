@@ -63,7 +63,7 @@
           facebook={comicObject.facebook}
           youtube={comicObject.youtube}
           email={comicObject.email}
-          website={comicObject.youtube}
+          website={comicObject.website}
         />
       {/each}
 
