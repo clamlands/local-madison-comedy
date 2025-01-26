@@ -4,11 +4,15 @@
   import chuky from '$lib/images/extra/chuky.jpg';
   import youtube from '$lib/images/icons/youtube.png';
   import apple from '$lib/images/icons/apple.png';
+  import applePod from '$lib/images/icons/applepod.png';
+  import insta from '$lib/images/icons/ig.png';
   import spotify from '$lib/images/icons/spotify.png';
   import bandcamp from '$lib/images/icons/bandcamp.png';
   import atlasLogo from '$lib/images/extra/atlaslogo.png';
   import atlas from '$lib/images/extra/atlas.jpg';
+  import atlasIcon from '$lib/images/icons/atlas-icon.png';
   import mbi from '$lib/images/extra/mbi-background.webp';
+  import mbiLogo from '$lib/images/icons/mbi.png';
   import mbiGroup from '$lib/images/extra/mbi-group.webp';
   import pitchpit from '$lib/images/extra/pitchpit.jpg';
 </script>
@@ -16,6 +20,10 @@
 <div class="width-container">
   <section>
     <h1>Extra</h1>
+    <p>
+      There's lots of content outside of stand-up that is produced by comedians in the
+      scene—including comedy albums, podcasts, sketches, improv, and more.
+    </p>
     <h2>Comedy Albums</h2>
     <div class="side-card">
       <img src={dirtynerd} alt="Dirty Nerd album cover" />
@@ -91,15 +99,70 @@
     <div>Capital Comedy Hour sketches</div>
     <div>Breanne, Owen, Will sketches</div>
     <h2>Podcasts</h2>
-    <img src={pitchpit} alt="The Pitch Pit" />
-    <h3>The Pitch Pit</h3>
-    <img src={chuky} alt="Choppin' It up with Chuky" />
-    <h3>Choppin' it up with Chuky</h3>
-    <a
-      href="https://www.youtube.com/@choppinitupwithchuky/videos"
-      target="_blank"
-      rel="noreferrer">Watch on YouTube</a
-    >
+    <div class="side-card">
+      <img src={pitchpit} alt="The Pitch Pit" />
+      <div class="content">
+        <h3>The Pitch Pit Podcast</h3>
+        <p>
+          Hosts Craig Smith, Amos Atkinson, and Alec White are joined by guests to pitch
+          ideas for jokes, sketches, movies, music, products, etc. They also take pitches
+          from our followers (Pitchers) who can submit pitches to possibly bounce their
+          ideas off working comedians.
+        </p>
+        <strong>Listen/follow here:</strong>
+        <div class="icon-links">
+          <a
+            href="https://open.spotify.com/show/06iLXtz4pY0cnwgpc7ZdFP?si=d6db91926b45489f"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={spotify} alt="Spotify icon" width="64" height="64" /></a
+          >
+          <a
+            href="https://podcasts.apple.com/us/podcast/the-pitch-pit/id1677869963"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={applePod} alt="Apple Podcasts icon" width="73" height="73" /></a
+          >
+          <a
+            href="https://www.instagram.com/pitchpitpodcast/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={insta} alt="Instagram icon" width="64" height="64" /></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="side-card flip">
+      <div class="content">
+        <h3>Choppin' it up with Chuky</h3>
+        <p>
+          A homegrown podcast hosted by Chuky Razo. Follow him throughout his journey as
+          he showcases his natural comedic abilities, along with amazing interviews
+          consisting of some of Madison's very own!
+        </p>
+        <strong>Watch/follow here:</strong>
+        <div class="icon-links">
+          <a
+            href="https://www.youtube.com/@choppinitupwithchuky/videos"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={youtube} alt="YouTube icon" /></a
+          >
+          <a
+            href="https://www.instagram.com/choppinitupwithchuky/s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={insta} alt="Instagram icon" /></a
+          >
+        </div>
+      </div>
+      <img src={chuky} alt="Choppin' It up with Chuky" />
+    </div>
     <h2>Madison Comedy Week</h2>
     <a href="https://madisoncomedyweek.com/" target="_blank" rel="noreferrer"
       >Festival link</a
@@ -110,17 +173,53 @@
       themed shows.
     </p>
     <h2>Improv</h2>
-    <img src={atlasLogo} alt="Atlas Improv logo" class="no-shadow" />
-    <img src={atlas} alt="Atlas Improv peforming" />
-    <div>From left: Steve Horton, Steve Wyeth, Neil Baron & Claire Ramming</div>
-    <a href="https://www.atlasimprov.com/" target="_blank" rel="noreferrer"
-      >Atlas Improv</a
-    >
-    <img src={mbi} alt="Monkey Business Institute logo" class="no-shadow" />
-    <img src={mbiGroup} alt="Monkey Business Institute group" />
-    <a href="https://monkeybusinessinstitute.com/" target="_blank" rel="noreferrer"
-      >Monkey Business Institute</a
-    >
+    <div class="side-card">
+      <div class="content">
+        <img src={atlasLogo} alt="Atlas Improv logo" class="no-shadow" />
+        <p>
+          Atlas improv something something. They do classes and there's a thing called The
+          Cut, where amateurs competing to be welcomed to the group of hobos at Atlas.
+          There's shows every weekend. This is one more sentence.
+        </p>
+        <strong>Info here:</strong>
+        <div class="icon-links">
+          <a href="https://atlasimprov.com/" target="_blank" rel="noreferrer"
+            ><img src={atlasIcon} alt="Atlas Improv icon" /></a
+          >
+          <a
+            href="https://www.instagram.com/atlasimprov/"
+            target="_blank"
+            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
+          >
+        </div>
+      </div>
+      <div>
+        <img src={atlas} alt="Atlas Improv peforming" />
+        <div>From left: Steve Horton, Steve Wyeth, Neil Baron & Claire Ramming</div>
+      </div>
+    </div>
+    <div class="side-card">
+      <div class="content">
+        <img src={mbi} alt="Monkey Business Institute logo" class="no-shadow" />
+        <p>
+          Monkey Business Institute something something. They do classes and there's a
+          thing called The Cut, where amateurs competing to be welcomed to the group of
+          hobos at MBI. There's shows every weekend. This is one more sentence.
+        </p>
+        <strong>Info here:</strong>
+        <div class="icon-links">
+          <a href="https://monkeybusinessinstitute.com/" target="_blank" rel="noreferrer"
+            ><img src={mbiLogo} alt="Monkey Business Institue icon" /></a
+          >
+          <a
+            href="https://www.instagram.com/monkeybusinessinstitute"
+            target="_blank"
+            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
+          >
+        </div>
+      </div>
+      <img src={mbiGroup} alt="Monkey Business Institute group" />
+    </div>
   </section>
 </div>
 
@@ -138,17 +237,61 @@
     gap: 10px;
   }
 
+  .content p {
+    margin-bottom: 20px;
+  }
+
   .flip {
     flex-direction: column-reverse;
   }
 
   .icon-links {
     display: flex;
-    gap: 40px;
+    gap: 30px;
   }
 
   .icon-links a img {
     box-shadow: none;
+  }
+
+  @keyframes pulsate {
+    100% {
+      text-shadow:
+        0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 7px #fff,
+        0 0 40px var(--neon2),
+        0 0 80px var(--neon2),
+        0 0 90px var(--neon2),
+        0 0 100px var(--neon2),
+        0 0 150px var(--neon2);
+    }
+
+    0% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px var(--neon2),
+        0 0 45px var(--neon2),
+        0 0 55px var(--neon2),
+        0 0 70px var(--neon2),
+        0 0 80px var(--neon2);
+    }
+  }
+
+  h2 {
+    /* font-family: Sacramento; */
+    font-family: 'Vibur';
+    /* font-family: 'Exo2'; */
+    color: #fff;
+    font-size: 6.2rem;
+    font-weight: 400;
+    animation: pulsate 1s infinite alternate;
+    margin-bottom: 40px;
+    background-color: var(--text);
+    text-align: center;
+    padding: 20px 0;
   }
 
   @media (min-width: 768px) {

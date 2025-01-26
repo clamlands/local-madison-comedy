@@ -47,6 +47,7 @@ body {
   flex-direction: column;
   align-items: center;
   --neon: rgb(27, 65, 217);
+  --neon2: rgb(217, 27, 192);
 }
 
 @keyframes fadeInAnimation {

@@ -1,4 +1,5 @@
 <script>
+  import { PUBLIC_GOOGLE_SHEETS_KEY } from '$env/static/public';
   import ComicCard from './ComicCard.svelte';
   import noah from '$lib/images/noah-750.webp';
   import eli from '$lib/images/EliWilz-750.webp';
@@ -9,7 +10,7 @@
 
   async function getComics() {
     const response = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/1Vmy362KSY7vJa9HNiAJH1rCjUpzRUjfV_ieTeDqxjUs/values/Form%20Responses%201!A:K?key=${API_KEY}`,
+      `https://sheets.googleapis.com/v4/spreadsheets/1Vmy362KSY7vJa9HNiAJH1rCjUpzRUjfV_ieTeDqxjUs/values/Form%20Responses%201!A:K?key=${PUBLIC_GOOGLE_SHEETS_KEY}`,
     );
     const json = await response.json();
     const rows = json.values;
