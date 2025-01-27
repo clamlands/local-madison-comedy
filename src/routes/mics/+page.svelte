@@ -1,7 +1,6 @@
 <script>
   import OpenMicCard from './OpenMicCard.svelte';
   import state from '$lib/images/mics/state.webp';
-  import './mics.css';
 
   const micImages = {
     state: state,
@@ -86,3 +85,61 @@
     </section>
   {/each}
 </div>
+
+<style>
+  .open-mics-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  .notice {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .fb-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #1877f2;
+    text-decoration: none;
+  }
+
+  .fb-link:hover {
+    text-decoration: underline;
+  }
+
+  .day-section {
+    margin-bottom: 3rem;
+  }
+
+  .no-mics {
+    color: var(--text);
+    opacity: 0.7;
+    font-style: italic;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  @media (max-width: 768px) {
+    .open-mics-container {
+      padding: 1rem 0;
+    }
+  }
+</style>
