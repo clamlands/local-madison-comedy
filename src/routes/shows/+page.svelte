@@ -66,3 +66,12 @@
     <h2>The Merge</h2>
   </section>
 </div>
+
+<style>
+  .width-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  </style>
