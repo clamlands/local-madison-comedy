@@ -13,13 +13,12 @@ header {
   margin-bottom: 15px;
   z-index: 1;
   /* can remove when burger menu done */
-  background-color: var(--background);
+  background-color: var(--dark-background);
 }
 
 nav a {
   text-decoration: none;
-  color: var(--color);
-  font-size: 16px;
+  color: var(--text);
 }
 
 /* for when the burger menu is set up */
@@ -96,7 +95,17 @@ nav {
   }
 
   nav a {
-    transition: all 0.5s ease;
+    transition: all 0.15s ease;
+  }
+
+  nav a:hover {
+    text-shadow:
+      0 0 3px #fff,
+      0 0 10px var(--neon),
+      0 0 20px var(--neon),
+      0 0 30px var(--neon),
+      0 0 50px var(--neon),
+      0 0 70px var(--neon);
   }
 
   nav {

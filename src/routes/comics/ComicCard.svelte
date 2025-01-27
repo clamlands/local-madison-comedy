@@ -29,11 +29,11 @@
     {#if youtube}
       <a href={youtube} target="_blank" rel="noreferrer">YouTube</a>
     {/if}
-    {#if email}
-      <div>Email: {email}</div>
-    {/if}
     {#if website}
       <a href={website} target="_blank" rel="noreferrer">{website}</a>
+    {/if}
+    {#if email}
+      <div>Email: {email}</div>
     {/if}
   </div>
 </div>
@@ -47,5 +47,9 @@
 
   a {
     color: var(--neon);
+  }
+
+  img {
+    border-radius: 8px;
   }
 </style>

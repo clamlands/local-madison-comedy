@@ -8,7 +8,7 @@
   import insta from '$lib/images/icons/ig.png';
   import spotify from '$lib/images/icons/spotify.png';
   import bandcamp from '$lib/images/icons/bandcamp.png';
-  import atlasLogo from '$lib/images/extra/atlaslogo.png';
+  import atlasLogo from '$lib/images/extra/atlaslogo-white.png';
   import atlas from '$lib/images/extra/atlas.jpg';
   import atlasIcon from '$lib/images/icons/atlas-icon.png';
   import mbi from '$lib/images/extra/mbi-background.webp';
@@ -175,7 +175,7 @@
     <h2>Improv</h2>
     <div class="side-card">
       <div class="content">
-        <img src={atlasLogo} alt="Atlas Improv logo" class="no-shadow" />
+        <img src={atlasLogo} alt="Atlas Improv logo" />
         <p>
           Atlas improv something something. They do classes and there's a thing called The
           Cut, where amateurs competing to be welcomed to the group of hobos at Atlas.
@@ -200,7 +200,7 @@
     </div>
     <div class="side-card">
       <div class="content">
-        <img src={mbi} alt="Monkey Business Institute logo" class="no-shadow" />
+        <img src={mbi} alt="Monkey Business Institute logo" />
         <p>
           Monkey Business Institute something something. They do classes and there's a
           thing called The Cut, where amateurs competing to be welcomed to the group of
@@ -224,27 +224,6 @@
 </div>
 
 <style>
-  .side-card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 100px;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .content p {
-    margin-bottom: 20px;
-  }
-
-  .flip {
-    flex-direction: column-reverse;
-  }
-
   .icon-links {
     display: flex;
     gap: 30px;
@@ -280,28 +259,26 @@
     }
   }
 
+  img {
+    border-radius: 8px;
+  }
+
   h2 {
     /* font-family: Sacramento; */
     font-family: 'Vibur';
     /* font-family: 'Exo2'; */
     color: #fff;
-    font-size: 6.2rem;
+    font-size: 80px;
     font-weight: 400;
     animation: pulsate 1s infinite alternate;
-    margin-bottom: 40px;
-    background-color: var(--text);
+    margin: 50px -15px 60px -15px;
     text-align: center;
-    padding: 20px 0;
   }
 
   @media (min-width: 768px) {
-    .side-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 50px;
-      justify-items: start;
-      margin-bottom: 150px;
+    h2 {
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .icon-links a:hover {

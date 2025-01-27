@@ -98,6 +98,7 @@
 
 <section>
   <h1>Upcoming Madison Comedy Shows</h1>
+  <div>Also Antoine McNeail, Chuky Razo, Don't Tell, some Justin Shows</div>
   {#if curatedEventsArray.length === 0}
     <h2>Loading upcoming shows</h2>
   {/if}

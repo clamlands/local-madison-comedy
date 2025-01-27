@@ -35,7 +35,7 @@
       {
         venue: 'The Revolver at Rigby',
         description:
-          'Every week a new host picks a theme or gimmick for the night that the comics prepare for. The theme is posted ahead of time day-of on the Facebook group. Past themes have included "Yo mama" jokes, Roast Mic, Random Wikipedia Article, Ohio, and tons more.',
+          'Every week a new host picks a theme or gimmick for the comics to prepare for. The theme is posted ahead of time day-of on the Facebook group. Past themes have included "Yo mama" jokes, Roast Mic, Random Wikipedia Article, Ohio, and tons more.',
         time: '8:00 PM',
         signup: '7:30PM',
       },

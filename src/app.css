@@ -35,9 +35,13 @@ html {
 
 body {
   font-family: Ubuntu;
-  background-color: var(--background);
+  background-color: var(--dark-background);
   --background: rgb(235, 235, 235);
-  --text: rgb(28, 28, 28);
+  --dark-background: rgb(28, 28, 28);
+  /* --text: rgb(28, 28, 28); */
+  --text: rgb(227, 227, 227);
+  --dark-text: rgb(28, 28, 28);
+  color: rgb(227, 227, 227);
   --button: rgb(221, 0, 255);
   font-size: 16px;
   --border: rgba(247, 247, 247, 0.3);
@@ -78,6 +82,14 @@ main {
   align-items: center;
 }
 
+.width-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 section {
   width: 100%;
   padding: 0 15px;
@@ -86,15 +98,14 @@ section {
 img {
   width: 100%;
   height: auto;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25); */
 }
 
-.no-shadow {
+/* .no-shadow {
   box-shadow: none;
-}
+} */
 
 footer {
-  background-color: var(--background);
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -129,13 +140,6 @@ hr {
 }
 
 /*----------CLASSES----------*/
-.width-container {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
 
 .comic-card {
   margin-bottom: 50px;
@@ -179,6 +183,28 @@ hr {
   margin-bottom: 50px;
 }
 
+/* Side cards */
+.side-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.flip {
+  flex-direction: column-reverse;
+}
+
 /*----------DESKTOP----------*/
 @media (min-width: 768px) {
   .margin-bottom-small-mobile {
@@ -191,5 +217,14 @@ hr {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: max-content;
     gap: 40px;
+  }
+
+  .side-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    justify-items: start;
+    margin-bottom: 150px;
   }
 }

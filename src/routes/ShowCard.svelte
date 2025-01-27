@@ -53,7 +53,7 @@
   .to-eventbrite {
     background-color: var(--button);
     font-weight: bold;
-    color: var(--text);
+    color: var(--dark-text);
     margin-top: 4px;
     padding: 15px 32px;
     text-decoration: none;

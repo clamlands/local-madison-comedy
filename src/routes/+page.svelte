@@ -3,6 +3,7 @@
   import ComicCard from './comics/ComicCard.svelte';
   import noah from '$lib/images/noah-750.webp';
   import eli from '$lib/images/EliWilz-750.webp';
+  import brick from '$lib/images/brick.jpg';
 
   const featuredComics = [
     {
@@ -41,7 +42,7 @@
       <p>Meet local performers</p>
     </a>
   </section>
-  <section class="about-scene">
+  <!-- <section class="about-scene">
     <div class="venue-highlights">
       <h3>Key Venues</h3>
       <ul>
@@ -50,7 +51,7 @@
         <li><strong>The Argus</strong> - Weekly open mic for new talent</li>
       </ul>
     </div>
-  </section>
+  </section> -->
 
   <UpcomingShows />
 </div>
@@ -60,7 +61,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--text);
     margin-top: -15px;
     width: 100%;
     padding: 30px;
@@ -71,6 +71,10 @@
   .tagline {
     color: white;
   }
+
+  /* .width-container {
+    background-image: url('$lib/images/brick.jpg');
+  } */
 
   @keyframes pulsate {
     100% {
