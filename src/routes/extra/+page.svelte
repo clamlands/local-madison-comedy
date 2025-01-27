@@ -1,4 +1,8 @@
+<!--
+extra
+-->
 <script>
+  import ExtraCard from './ExtraCard.svelte';
   import dirtynerd from '$lib/images/extra/dirtynerd.jpg';
   import charlie from '$lib/images/extra/charlie.webp';
   import chuky from '$lib/images/extra/chuky.jpg';
@@ -11,226 +15,213 @@
   import atlasLogo from '$lib/images/extra/atlaslogo-white.png';
   import atlas from '$lib/images/extra/atlas.jpg';
   import atlasIcon from '$lib/images/icons/atlas-icon.png';
+  import web from '$lib/images/icons/www.webp';
   import mbi from '$lib/images/extra/mbi-background.webp';
   import mbiLogo from '$lib/images/icons/mbi.png';
   import mbiGroup from '$lib/images/extra/mbi-group.webp';
   import pitchpit from '$lib/images/extra/pitchpit.jpg';
+  import cch from '$lib/images/extra/cch.png';
+  import mcw from '$lib/images/extra/mcw.jpg';
+
+
+  const sections = [
+    {
+      id: 'albums',
+      title: 'Comedy Albums',
+      icon: '💽'
+    },
+    {
+      id: 'podcasts',
+      title: 'Podcasts',
+      icon: '🎙️'
+    },
+    {
+      id: 'sketch',
+      title: 'Sketch Comedy',
+      icon: '🎭'
+    },
+    {
+      id: 'improv',
+      title: 'Improv',
+      icon: '🌎'
+    },
+     {
+      id: 'comedy-week',
+      title: 'Comedy Week',
+      icon: '🎪'
+    }
+  ];
 </script>
 
-<div class="width-container">
-  <section>
-    <h1>Extra</h1>
-    <p>
-      There's lots of content outside of stand-up that is produced by comedians in the
-      scene—including comedy albums, podcasts, sketches, improv, and more.
-    </p>
-    <h2>Comedy Albums</h2>
-    <div class="side-card">
-      <img src={dirtynerd} alt="Dirty Nerd album cover" />
-      <div class="content">
-        <h3>Dirty Nerd - Sasha Rosser</h3>
-        <p>
-          Nothing is off limits in Sasha Rosser's blistering debut comedy album. Seasoning
-          dark, dirty stand-up with her background as a synth producer and academic,
-          Sasha's irreverent takes on everything from Pavlov's dog to Sapphic sex are
-          bookended with original music made through her side project as exandroid.
-        </p>
-        <strong>Listen here:</strong>
-        <div class="icon-links">
-          <a
-            href="https://sasharosser.bandcamp.com/album/dirty-nerd"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={bandcamp} alt="Bandcamp icon" width="64" height="64" /></a
-          >
-          <a
-            href="https://open.spotify.com/album/1mWexCfq079qwnKMS1ZpeZ?si=ttC91kcOQeWAlngMJU_qEQ"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={spotify} alt="Spotify icon" width="64" height="64" /></a
-          >
-          <a
-            href="https://music.apple.com/us/album/dirty-nerd/1750445026"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={apple} alt="Apple Music icon" width="64" height="64" /></a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="side-card flip">
-      <div class="content">
-        <h3>A Normal Amount of Pain - Charlie Kojis</h3>
-        <p>
-          From an antique store in Milwaukee, Wisconsin, comedian Charlie Kojis tells
-          jokes about cast iron pans, funerals, and the origins of Irish dance.
-        </p>
-        <strong>Watch/listen here:</strong>
-        <div class="icon-links">
-          <a
-            href="https://youtu.be/XwwRuMid150?si=P1tFLRJuOM_oNpuL"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={youtube} alt="YouTube icon" width="64" height="45" /></a
-          >
-          <a
-            href="https://open.spotify.com/album/2m9tKGBrhlGiMIpz4z2UFH?si=1D1ykGJVTVuvQT-9hGgojQ"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={spotify} alt="Spotify icon" width="64" height="64" /></a
-          >
-          <a
-            href="https://music.apple.com/us/album/a-normal-amount-of-pain/1750142983"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={apple} alt="Apple Music icon" /></a
-          >
-        </div>
-      </div>
-      <img src={charlie} alt="A Normal Amount of Pain album cover" />
-    </div>
-    <h2>Sketch</h2>
-    <div>Capital Comedy Hour sketches</div>
-    <div>Breanne, Owen, Will sketches</div>
-    <h2>Podcasts</h2>
-    <div class="side-card">
-      <img src={pitchpit} alt="The Pitch Pit" />
-      <div class="content">
-        <h3>The Pitch Pit Podcast</h3>
-        <p>
-          Hosts Craig Smith, Amos Atkinson, and Alec White are joined by guests to pitch
-          ideas for jokes, sketches, movies, music, products, etc. They also take pitches
-          from our followers (Pitchers) who can submit pitches to possibly bounce their
-          ideas off working comedians.
-        </p>
-        <strong>Listen/follow here:</strong>
-        <div class="icon-links">
-          <a
-            href="https://open.spotify.com/show/06iLXtz4pY0cnwgpc7ZdFP?si=d6db91926b45489f"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={spotify} alt="Spotify icon" width="64" height="64" /></a
-          >
-          <a
-            href="https://podcasts.apple.com/us/podcast/the-pitch-pit/id1677869963"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={applePod} alt="Apple Podcasts icon" width="73" height="73" /></a
-          >
-          <a
-            href="https://www.instagram.com/pitchpitpodcast/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={insta} alt="Instagram icon" width="64" height="64" /></a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="side-card flip">
-      <div class="content">
-        <h3>Choppin' it up with Chuky</h3>
-        <p>
-          A homegrown podcast hosted by Chuky Razo. Follow him throughout his journey as
-          he showcases his natural comedic abilities, along with amazing interviews
-          consisting of some of Madison's very own!
-        </p>
-        <strong>Watch/follow here:</strong>
-        <div class="icon-links">
-          <a
-            href="https://www.youtube.com/@choppinitupwithchuky/videos"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={youtube} alt="YouTube icon" /></a
-          >
-          <a
-            href="https://www.instagram.com/choppinitupwithchuky/s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={insta} alt="Instagram icon" /></a
-          >
-        </div>
-      </div>
-      <img src={chuky} alt="Choppin' It up with Chuky" />
-    </div>
-    <h2>Madison Comedy Week</h2>
-    <a href="https://madisoncomedyweek.com/" target="_blank" rel="noreferrer"
-      >Festival link</a
-    >
-    <p>
-      Madison Comedy Week is an comedy festival held each year in August. It features
-      upwards of 20 shows spanning stand-up, improv, variety shows, and other special
-      themed shows.
-    </p>
-    <h2>Improv</h2>
-    <div class="side-card">
-      <div class="content">
-        <img src={atlasLogo} alt="Atlas Improv logo" />
-        <p>
-          Atlas improv something something. They do classes and there's a thing called The
-          Cut, where amateurs competing to be welcomed to the group of hobos at Atlas.
-          There's shows every weekend. This is one more sentence.
-        </p>
-        <strong>Info here:</strong>
-        <div class="icon-links">
-          <a href="https://atlasimprov.com/" target="_blank" rel="noreferrer"
-            ><img src={atlasIcon} alt="Atlas Improv icon" /></a
-          >
-          <a
-            href="https://www.instagram.com/atlasimprov/"
-            target="_blank"
-            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
-          >
-        </div>
-      </div>
-      <div>
-        <img src={atlas} alt="Atlas Improv peforming" />
-        <div>From left: Steve Horton, Steve Wyeth, Neil Baron & Claire Ramming</div>
-      </div>
-    </div>
-    <div class="side-card">
-      <div class="content">
-        <img src={mbi} alt="Monkey Business Institute logo" />
-        <p>
-          Monkey Business Institute something something. They do classes and there's a
-          thing called The Cut, where amateurs competing to be welcomed to the group of
-          hobos at MBI. There's shows every weekend. This is one more sentence.
-        </p>
-        <strong>Info here:</strong>
-        <div class="icon-links">
-          <a href="https://monkeybusinessinstitute.com/" target="_blank" rel="noreferrer"
-            ><img src={mbiLogo} alt="Monkey Business Institue icon" /></a
-          >
-          <a
-            href="https://www.instagram.com/monkeybusinessinstitute"
-            target="_blank"
-            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
-          >
-        </div>
-      </div>
-      <img src={mbiGroup} alt="Monkey Business Institute group" />
-    </div>
+<section class="hero">
+  <h1>Extra Content</h1>
+  <p>
+    Discover additional content from Madison's comedy scene—including comedy albums, 
+    podcasts, sketches, improv performances, and more.
+  </p>
+
+  <nav class="quick-links">
+    {#each sections as {id, title, icon}}
+      <a href="#{id}" class="quick-link">
+        <span class="icon">{icon}</span>
+        <h3>{title}</h3>
+      </a>
+    {/each}
+  </nav>
   </section>
-</div>
+
+  <div class="width-container">
+
+
+    {#each sections as {id, title}}
+      <section id={id}>
+        <h2>{title}</h2>
+        {#if id === 'albums'}
+  <ExtraCard
+    img={dirtynerd}
+    title="Dirty Nerd - Sasha Rosser"
+    description="Nothing is off limits in Sasha Rosser's blistering debut comedy album. Seasoning dark, dirty stand-up with her background as a synth producer and academic, Sasha's irreverent takes on everything from Pavlov's dog to Sapphic sex are bookended with original music made through her side project as exandroid."
+    links={[
+      { icon: bandcamp, url: "https://sasharosser.bandcamp.com/album/dirty-nerd", alt: "Bandcamp" },
+      { icon: spotify, url: "https://open.spotify.com/album/1mWexCfq079qwnKMS1ZpeZ", alt: "Spotify" },
+      { icon: apple, url: "https://music.apple.com/us/album/dirty-nerd/1750445026", alt: "Apple Music" }
+    ]}
+  />
+  
+  <ExtraCard
+    img={charlie}
+    title="A Normal Amount of Pain - Charlie Kojis"
+    description="From an antique store in Milwaukee, Wisconsin, comedian Charlie Kojis tells jokes about cast iron pans, funerals, and the origins of Irish dance."
+    links={[
+      { icon: youtube, url: "https://youtu.be/XwwRuMid150", alt: "YouTube" },
+      { icon: spotify, url: "https://open.spotify.com/album/2m9tKGBrhlGiMIpz4z2UFH", alt: "Spotify" },
+      { icon: apple, url: "https://music.apple.com/us/album/a-normal-amount-of-pain/1750142983", alt: "Apple Music" }
+    ]}
+    flip={true}
+  />
+{/if}
+
+{#if id === 'podcasts'}
+  <ExtraCard
+    img={pitchpit}
+    title="The Pitch Pit Podcast"
+    description="Hosts Craig Smith, Amos Atkinson, and Alec White are joined by guests to pitch ideas for jokes, sketches, movies, music, products, etc. They also take pitches from our followers (Pitchers) who can submit pitches to possibly bounce their ideas off working comedians."
+    links={[
+      { icon: spotify, url: "https://open.spotify.com/show/06iLXtz4pY0cnwgpc7ZdFP", alt: "Spotify" },
+      { icon: applePod, url: "https://podcasts.apple.com/us/podcast/the-pitch-pit/id1677869963", alt: "Apple Podcasts" },
+      { icon: insta, url: "https://www.instagram.com/pitchpitpodcast/", alt: "Instagram" }
+    ]}
+  />
+  
+  <ExtraCard
+    img={chuky}
+    title="Choppin' it up with Chuky"
+    description="A homegrown podcast hosted by Chuky Razo. Follow him throughout his journey as he showcases his natural comedic abilities, along with amazing interviews consisting of some of Madison's very own!"
+    links={[
+      { icon: youtube, url: "https://www.youtube.com/@choppinitupwithchuky/videos", alt: "YouTube" },
+      { icon: insta, url: "https://www.instagram.com/choppinitupwithchuky/", alt: "Instagram" }
+    ]}
+    flip={true}
+  />
+{/if}
+
+{#if id === 'sketch'}
+  <ExtraCard
+    img={cch}
+    imgAlt="Capitol Comedy Hour Logo"
+    title="Capitol Comedy Hour"
+    description="The sketches you’ve seen at Capitol Comedy Hour—now available on your computer. Capitol Comedy Hour is a comedy variety show inspired by late-night TV. These sketches were performed live at the show and are now posted here for you to enjoy."
+    links={[
+      { icon: youtube, url: "https://www.youtube.com/@CapitolComedyHour", alt: "YouTube" },
+      { icon: insta, url: "https://www.instagram.com/amnrynning/", alt: "Instagram" }
+    ]}
+  />
+{/if}
+
+
+
+{#if id === 'improv'}
+  <ExtraCard
+    img={atlas}
+    imgAlt="Atlas Improv performing"
+    title={`Atlas Improv Co.`}
+    description={`Atlas Improv has been a cornerstone of Madison's comedy scene for over 20 years, offering high-energy shows every Friday and Saturday at 7 PM (family-friendly) and 9 PM. They provide a range of classes for all skill levels and host The Cut, an intense competition where aspiring improvisers vie for a spot among the esteemed Atlas performers. Whether you're looking to laugh, learn, or compete, Atlas Improv has something for everyone.`}
+    links={[
+      { icon: atlasIcon, url: "https://atlasimprov.com/", alt: "Atlas Improv website" },
+      { icon: insta, url: "https://www.instagram.com/atlasimprov/", alt: "Instagram" }
+    ]}
+  />
+  
+  <ExtraCard
+    img={mbiGroup}
+    imgAlt="Monkey Business Institute group"
+    title="Monkey Business Institute"
+    description="Monkey Business Institute features over 35 talented performers with decades of experience in improv, acting, music, and film. Many members honed their craft with Madison’s ComedySportz before 2002 and have been performing together for over a decade. With a mix of seasoned pros and fresh talent, their shows guarantee smart, hilarious entertainment—served with pizza"
+    links={[
+      { icon: mbiLogo, url: "https://monkeybusinessinstitute.com/", alt: "MBI website" },
+      { icon: insta, url: "https://www.instagram.com/monkeybusinessinstitute", alt: "Instagram" }
+    ]}
+  />
+{/if}
+
+{#if id === 'comedy-week'}
+  <ExtraCard
+    img={mcw}
+    imgAlt="Madison Comedy Week Logo"
+    title={`Madison Comedy Week`}
+    description={`Madison Comedy Week`}
+    links={[
+      { icon: web, url: "https://madisoncomedyweek.com/", alt: "Madison Comedy Week website" },
+      { icon: insta, url: "https://www.instagram.com/madisoncomedyweek/", alt: "Instagram" }
+    ]}
+  />
+  
+{/if}
+        
+      </section>
+    {/each}
+  </div>
 
 <style>
-  .icon-links {
+
+.hero {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    max-width: 1000px;
+    align-items: center;
+    margin-top: -15px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  .icon-links a img {
-    box-shadow: none;
+.width-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Vibur';
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+    animation: pulsate 1s infinite alternate;
+    margin: 50px 0 60px;
+    text-align: center;
   }
 
   @keyframes pulsate {
@@ -256,37 +247,6 @@
         0 0 55px var(--neon2),
         0 0 70px var(--neon2),
         0 0 80px var(--neon2);
-    }
-  }
-
-  img {
-    border-radius: 8px;
-  }
-
-  h2 {
-    /* font-family: Sacramento; */
-    font-family: 'Vibur';
-    /* font-family: 'Exo2'; */
-    color: #fff;
-    font-size: 80px;
-    font-weight: 400;
-    animation: pulsate 1s infinite alternate;
-    margin: 50px -15px 60px -15px;
-    text-align: center;
-  }
-
-  @media (min-width: 768px) {
-    h2 {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .icon-links a:hover {
-      transform: scale(1.07);
-    }
-
-    .icon-links a {
-      transition: all 0.25s ease;
     }
   }
 </style>

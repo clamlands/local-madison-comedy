@@ -5,22 +5,6 @@
   import eli from '$lib/images/EliWilz-750.webp';
   import brick from '$lib/images/brick.jpg';
 
-  const featuredComics = [
-    {
-      img: noah,
-      name: 'Noah Mailloux',
-      insta: 'https://www.instagram.com/noahmailloux/',
-      clip: 'https://www.youtube.com/watch?v=FzSgMFVobT0',
-      bio: 'Host of The Revolver Open Mic and producer with Cheshire Cat Comedy',
-    },
-    {
-      img: eli,
-      name: 'Eli Wilz',
-      insta: 'https://www.instagram.com/eliwilz/',
-      clip: 'https://www.youtube.com/watch?v=iqOCiv-Sn1s',
-      bio: 'Madison-based comedian known for his unique perspective and sharp wit',
-    },
-  ];
 </script>
 
 <section class="hero">
@@ -57,6 +41,8 @@
 </div>
 
 <style>
+
+
   .hero {
     display: flex;
     flex-direction: column;
