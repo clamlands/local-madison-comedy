@@ -5,7 +5,6 @@
   import eli from '$lib/images/EliWilz-750.webp';
   import { onMount } from 'svelte';
 
-  const API_KEY = 'AIzaSyAQMoPgfFHd_4BBEnADmvtoH3jY-pRRAp0';
   const comicObjectArray = $state([]);
 
   async function getComics() {
@@ -15,7 +14,6 @@
     const json = await response.json();
     const rows = json.values;
     converToObjects(rows);
-    console.log(comicObjectArray);
   }
 
   function converToObjects(rows) {
@@ -24,7 +22,6 @@
       if (i === 0) {
         return;
       }
-      console.log(i);
       let comicObj = {
         headshot: row[1],
         name: row[2],

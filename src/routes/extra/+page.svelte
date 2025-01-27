@@ -224,15 +224,6 @@
 </div>
 
 <style>
-  .icon-links {
-    display: flex;
-    gap: 30px;
-  }
-
-  .icon-links a img {
-    box-shadow: none;
-  }
-
   @keyframes pulsate {
     100% {
       text-shadow:
@@ -279,14 +270,6 @@
     h2 {
       margin-left: 0;
       margin-right: 0;
-    }
-
-    .icon-links a:hover {
-      transform: scale(1.07);
-    }
-
-    .icon-links a {
-      transition: all 0.25s ease;
     }
   }
 </style>

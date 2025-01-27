@@ -2,8 +2,6 @@
   let { img, name, bio, clip, insta, facebook, youtube, email, website } = $props();
 
   const imgId = img.split('?id=')[1];
-  console.log(img);
-  console.log(imgId);
 </script>
 
 <div class="comic-card">

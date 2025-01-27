@@ -205,6 +205,11 @@ hr {
   flex-direction: column-reverse;
 }
 
+.icon-links {
+  display: flex;
+  gap: 30px;
+}
+
 /*----------DESKTOP----------*/
 @media (min-width: 768px) {
   .margin-bottom-small-mobile {
@@ -226,5 +231,13 @@ hr {
     gap: 50px;
     justify-items: start;
     margin-bottom: 150px;
+  }
+
+  .icon-links a:hover {
+    transform: scale(1.07);
+  }
+
+  .icon-links a {
+    transition: all 0.25s ease;
   }
 }

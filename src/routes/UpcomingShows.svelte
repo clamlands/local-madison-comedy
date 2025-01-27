@@ -11,7 +11,6 @@
     );
     const json = await response.json();
     const events = json.events;
-    console.log(events);
     curateEventsArray(events);
   }
 
