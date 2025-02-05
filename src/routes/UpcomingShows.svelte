@@ -96,10 +96,15 @@
 </script>
 
 <section>
-  <h1>Upcoming Madison Comedy Shows</h1>
-  <div>Also Antoine McNeail, Chuky Razo, Don't Tell, some Justin Shows</div>
+  <h2 class="upcoming">Upcoming Shows</h2>
+  <p class="other-shows">
+    Here are SOME of the upcoming shows for which tickets can be bought on Eventbrite.
+    Also check out shows run by entities such as 1Motion Out Reach Enterprise, Don't Tell:
+    Madison, and
+    <a href="/shows">more</a>.
+  </p>
   {#if curatedEventsArray.length === 0}
-    <h2>Loading upcoming shows</h2>
+    <h2>Loading upcoming shows...</h2>
   {/if}
 
   <div class="show-cards">
@@ -117,6 +122,51 @@
 </section>
 
 <style>
+  a {
+    color: inherit;
+  }
+
+  .other-shows {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .upcoming {
+    font-family: 'Vibur';
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+    animation: pulsate 1s infinite alternate;
+    margin: 50px 0 60px;
+    text-align: center;
+  }
+
+  @keyframes pulsate {
+    100% {
+      text-shadow:
+        0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 7px #fff,
+        0 0 40px var(--neon2),
+        0 0 80px var(--neon2),
+        0 0 90px var(--neon2),
+        0 0 100px var(--neon2),
+        0 0 150px var(--neon2);
+    }
+
+    0% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px var(--neon2),
+        0 0 45px var(--neon2),
+        0 0 55px var(--neon2),
+        0 0 70px var(--neon2),
+        0 0 80px var(--neon2);
+    }
+  }
+
   @media (min-width: 768px) {
     .show-cards {
       width: 100%;
@@ -125,6 +175,11 @@
       grid-auto-rows: max-content;
       column-gap: 30px;
       row-gap: 75px;
+    }
+
+    .other-shows {
+      margin-left: 300px;
+      margin-right: 300px;
     }
   }
 </style>

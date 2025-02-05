@@ -1,12 +1,5 @@
 <script>
-  let { 
-    img, 
-    title, 
-    description, 
-    links = [],
-    imgAlt = "",
-    flip = false 
-  } = $props();
+  let { img, title, description, links = [], imgAlt = '', flip = false } = $props();
 </script>
 
 <div class="extra-card {flip ? 'flip' : ''}">
@@ -17,9 +10,9 @@
     {#if links.length > 0}
       <strong>Listen/follow here:</strong>
       <div class="icon-links">
-        {#each links as {icon, url, alt}}
+        {#each links as { icon, url, alt }}
           <a href={url} target="_blank" rel="noreferrer">
-            <img src={icon} alt={alt} />
+            <img src={icon} {alt} />
           </a>
         {/each}
       </div>
@@ -58,7 +51,7 @@
 
   .icon-links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
 
   .icon-links a img {
@@ -72,7 +65,8 @@
   }
 
   @media (max-width: 768px) {
-    .extra-card, .extra-card.flip {
+    .extra-card,
+    .extra-card.flip {
       flex-direction: column;
     }
 

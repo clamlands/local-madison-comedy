@@ -53,7 +53,7 @@ extra
 </script>
 
 <section class="hero">
-  <h1>Extra Content</h1>
+  <h1 class="neon-title">Extra Content</h1>
   <p>
     Discover additional content from Madison's comedy scene—including comedy albums,
     podcasts, sketches, improv performances, and more.
@@ -220,6 +220,7 @@ extra
               alt: 'Instagram',
             },
           ]}
+          flip={true}
         />
       {/if}
 
@@ -264,6 +265,54 @@ extra
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 0;
+  }
+
+  @keyframes pulsate-title {
+    100% {
+      text-shadow:
+        0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 7px #fff,
+        0 0 40px var(--neon),
+        0 0 80px var(--neon),
+        0 0 90px var(--neon),
+        0 0 100px var(--neon),
+        0 0 150px var(--neon);
+    }
+
+    0% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px var(--neon),
+        0 0 45px var(--neon),
+        0 0 55px var(--neon),
+        0 0 70px var(--neon),
+        0 0 80px var(--neon);
+    }
+  }
+
+  .neon-title {
+    /* font-family: Sacramento; */
+    font-family: 'Vibur';
+    /* font-family: 'Exo2'; */
+    text-align: center;
+    color: #fff;
+    font-size: 6.2rem;
+    font-weight: 400;
+    animation: pulsate-title 1s infinite alternate;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    box-shadow:
+      0 0 0.2rem #fff,
+      0 0 0.2rem #fff,
+      0 0 2rem var(--neon),
+      0 0 0.8rem var(--neon),
+      0 0 2.8rem var(--neon),
+      inset 0 0 1.3rem var(--neon);
   }
 
   .quick-links {

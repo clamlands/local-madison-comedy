@@ -8,7 +8,7 @@
   <!-- <img src={img} alt="Headshot of {name}" /> -->
   <img
     src={`https://drive.google.com/thumbnail?id=${imgId}&sz=w1000`}
-    alt=""
+    alt={name}
     height="500"
     width="500"
   />

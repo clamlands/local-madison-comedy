@@ -37,14 +37,3 @@
   margin: 1rem 0;
   line-height: 1.5;
 }
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .quick-links {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding: 1rem 0;
-  }
-}

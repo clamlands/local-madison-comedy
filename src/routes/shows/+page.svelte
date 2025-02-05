@@ -11,12 +11,14 @@
 </script>
 
 <div class="width-container">
-  <section>
-    <h1>Stand-up Shows</h1>
+  <section class="hero">
+    <h1 class="neon-title">Stand-up Shows</h1>
     <p>
-      Blurb... There's a bunch of regularly occuring comedy shows, and there's comeyd
-      groups running shows in varios places etc.
+      There are many regularly occuring comedy shows in Madison every month. Check out the
+      production teams and shows below.
     </p>
+  </section>
+  <section>
     <div class="side-card">
       <img src={ccc} alt="Cheshire Cat Comedy logo" />
       <div class="content">
@@ -40,6 +42,9 @@
         </div>
       </div>
     </div>
+
+    <hr class="narrow" />
+
     <div class="side-card flip">
       <div class="content">
         <h2>Capitol Comedy Hour</h2>
@@ -57,6 +62,9 @@
       </div>
       <img src={cch} alt="Capitol Comedy Hour logo" />
     </div>
+
+    <hr class="narrow" />
+
     <div class="side-card">
       <img src={silly} alt="Silly Street Comedy logo" />
       <div class="content">
@@ -75,6 +83,9 @@
         </div>
       </div>
     </div>
+
+    <hr class="narrow" />
+
     <div class="side-card flip">
       <div class="content">
         <h2>Comedy at the Cabaret</h2>
@@ -94,6 +105,9 @@
       </div>
       <img src={cabaret} alt="Comedy at the Cabaret logo" />
     </div>
+
+    <hr class="narrow" />
+
     <div class="side-card">
       <img src={donttell} alt="Don't Tell Comedy: Madison logo" />
       <div class="content">
@@ -113,6 +127,11 @@
         </div>
       </div>
     </div>
+
+    <hr class="narrow" />
+
+    <h2>Antoine</h2>
+    <h2>Chuky</h2>
     <h2>Justin Frisque</h2>
     <h2>Lady Laughs</h2>
     <h2>Lisa Quam</h2>
@@ -128,4 +147,73 @@
     padding: 2rem 0;
   }
 
-  </style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    align-items: center;
+    margin-top: -15px;
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @keyframes pulsate-title {
+    100% {
+      text-shadow:
+        0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 7px #fff,
+        0 0 40px var(--neon),
+        0 0 80px var(--neon),
+        0 0 90px var(--neon),
+        0 0 100px var(--neon),
+        0 0 150px var(--neon);
+    }
+
+    0% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px var(--neon),
+        0 0 45px var(--neon),
+        0 0 55px var(--neon),
+        0 0 70px var(--neon),
+        0 0 80px var(--neon);
+    }
+  }
+
+  .neon-title {
+    /* font-family: Sacramento; */
+    font-family: 'Vibur';
+    /* font-family: 'Exo2'; */
+    text-align: center;
+    color: #fff;
+    font-size: 5.9rem;
+    font-weight: 400;
+    animation: pulsate-title 1s infinite alternate;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    box-shadow:
+      0 0 0.2rem #fff,
+      0 0 0.2rem #fff,
+      0 0 2rem var(--neon),
+      0 0 0.8rem var(--neon),
+      0 0 2.8rem var(--neon),
+      inset 0 0 1.3rem var(--neon);
+  }
+
+  .icon-links a img {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (min-width: 768px) {
+    .neon-title {
+      font-size: 6.2rem;
+    }
+  }
+</style>

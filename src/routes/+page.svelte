@@ -4,7 +4,6 @@
   import noah from '$lib/images/noah-750.webp';
   import eli from '$lib/images/EliWilz-750.webp';
   import brick from '$lib/images/brick.jpg';
-
 </script>
 
 <section class="hero">
@@ -25,6 +24,10 @@
       <h3>Comics</h3>
       <p>Meet local performers</p>
     </a>
+    <a href="/extra" class="quick-link">
+      <h3>Extra</h3>
+      <p>Specials, podcasts, and more</p>
+    </a>
   </section>
   <!-- <section class="about-scene">
     <div class="venue-highlights">
@@ -41,8 +44,6 @@
 </div>
 
 <style>
-
-
   .hero {
     display: flex;
     flex-direction: column;

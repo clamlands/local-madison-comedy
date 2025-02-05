@@ -41,9 +41,14 @@
 </script>
 
 <div class="width-container">
+  <section class="hero">
+    <h1 class="neon-title">Comic Directory</h1>
+    <p>
+      Saw a Madison-area comedian and liked what you saw? Below is a list of all the
+      stand-up comics in the scene.
+    </p>
+  </section>
   <section>
-    <h1>Comic Directory</h1>
-
     <!-- DO NOT DELETE: This works. It might fail if there's too many requests though -->
     <!-- <img
       src="https://drive.google.com/thumbnail?id=1Ysshpf-4OHmpPSdjHB4kJMYYKp_fHzV_&sz=w1000"
@@ -86,4 +91,63 @@
 </div>
 
 <style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    align-items: center;
+    margin-top: -15px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @keyframes pulsate-title {
+    100% {
+      text-shadow:
+        0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 7px #fff,
+        0 0 40px var(--neon),
+        0 0 80px var(--neon),
+        0 0 90px var(--neon),
+        0 0 100px var(--neon),
+        0 0 150px var(--neon);
+    }
+
+    0% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px var(--neon),
+        0 0 45px var(--neon),
+        0 0 55px var(--neon),
+        0 0 70px var(--neon),
+        0 0 80px var(--neon);
+    }
+  }
+
+  .neon-title {
+    /* font-family: Sacramento; */
+    font-family: 'Vibur';
+    /* font-family: 'Exo2'; */
+    text-align: center;
+    color: #fff;
+    font-size: 6.2rem;
+    font-weight: 400;
+    animation: pulsate-title 1s infinite alternate;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    box-shadow:
+      0 0 0.2rem #fff,
+      0 0 0.2rem #fff,
+      0 0 2rem var(--neon),
+      0 0 0.8rem var(--neon),
+      0 0 2.8rem var(--neon),
+      inset 0 0 1.3rem var(--neon);
+  }
 </style>
