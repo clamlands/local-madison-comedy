@@ -47,7 +47,7 @@
       stand-up comics in the scene.
     </p>
   </section>
-  <section>
+  <section class="comic-section">
     <div class="comic-cards">
       {#each comicObjectArray as comicObject}
         <ComicCard
@@ -79,11 +79,18 @@
     text-align: center;
   }
 
+  .comic-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
   .comic-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
   }
 
   @keyframes pulsate-title {

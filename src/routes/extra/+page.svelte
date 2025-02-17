@@ -46,7 +46,7 @@ extra
     },
     {
       id: 'comedy-week',
-      title: 'Comedy Week',
+      title: 'Madison Comedy Week',
       icon: '🎪',
     },
   ];
