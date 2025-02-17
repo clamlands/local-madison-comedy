@@ -1,17 +1,43 @@
 <script>
   import { PUBLIC_CCC_API_KEY } from '$env/static/public';
+  import { PUBLIC_SILLY_STREET_API_KEY } from '$env/static/public';
   import ShowCard from './ShowCard.svelte';
   import { onMount } from 'svelte';
 
   let curatedEventsArray = $state([]);
 
+  // async function getEvents() {
+  //   const response = await fetch(
+  //     // `https://www.eventbriteapi.com/v3/organizations/{ORGANIZATION_ID}/events/?status=live&expand=venue&token=${PUBLIC_CCC_API_KEY}`,
+  //     // `https://www.eventbriteapi.com/v3/organizations/863190459903/events/?status=live&expand=venue&token=${PUBLIC_CCC_API_KEY}`,
+  //     `https://www.eventbriteapi.com/v3/organizations/2359569882963/events/?status=live&expand=venue&token=${PUBLIC_SILLY_STREET_API_KEY}`,
+  //   );
+  //   const json = await response.json();
+  //   const events = json.events;
+  //   curateEventsArray(events);
+  // }
+
+  const eventbriteURLs = [
+    `https://www.eventbriteapi.com/v3/organizations/863190459903/events/?status=live&expand=venue&token=${PUBLIC_CCC_API_KEY}`,
+    `https://www.eventbriteapi.com/v3/organizations/2359569882963/events/?status=live&expand=venue&token=${PUBLIC_SILLY_STREET_API_KEY}`,
+  ];
+
   async function getEvents() {
-    const response = await fetch(
-      `https://www.eventbriteapi.com/v3/organizations/863190459903/events/?status=live&expand=venue&token=${PUBLIC_CCC_API_KEY}`,
-    );
-    const json = await response.json();
-    const events = json.events;
-    curateEventsArray(events);
+    const responses = await Promise.all(eventbriteURLs.map((url) => fetch(url)));
+    const dataPromises = await responses.map((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    });
+    const data = await Promise.all(dataPromises);
+    const eventsArray = [];
+    data.forEach((dataPoint) => {
+      eventsArray.push(...dataPoint.events);
+    });
+    //sort events by date
+    eventsArray.sort((a, b) => new Date(a.start.utc) - new Date(b.start.utc));
+    curateEventsArray(eventsArray);
   }
 
   onMount(getEvents);

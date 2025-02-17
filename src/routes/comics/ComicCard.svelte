@@ -28,7 +28,7 @@
       <a href={youtube} target="_blank" rel="noreferrer">YouTube</a>
     {/if}
     {#if website}
-      <a href={website} target="_blank" rel="noreferrer">{website}</a>
+      <a href={website} target="_blank" rel="noreferrer">Personal website</a>
     {/if}
     {#if email}
       <div>Email: {email}</div>
