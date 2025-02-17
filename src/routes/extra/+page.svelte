@@ -188,7 +188,8 @@ extra
           img={atlas}
           imgAlt="Atlas Improv performing"
           title={`Atlas Improv Co.`}
-          description={`Atlas Improv has been a cornerstone of Madison's comedy scene for over 20 years, offering high-energy shows every Friday and Saturday at 7 PM (family-friendly) and 9 PM. They provide a range of classes for all skill levels and host The Cut, an intense competition where aspiring improvisers vie for a spot among the esteemed Atlas performers. Whether you're looking to laugh, learn, or compete, Atlas Improv has something for everyone.`}
+          description={`Atlas Improv has been a cornerstone of Madison's comedy scene for over 20 years, offering high-energy shows every Friday and Saturday at 7 PM (family-friendly) and 9 PM.`}
+          description2={`They provide a range of classes for all skill levels and host The Cut, an intense competition where aspiring improvisers vie for a spot among the esteemed Atlas performers. Whether you're looking to laugh, learn, or compete, Atlas Improv has something for everyone.`}
           links={[
             {
               icon: atlasIcon,
@@ -207,7 +208,8 @@ extra
           img={mbiGroup}
           imgAlt="Monkey Business Institute group"
           title="Monkey Business Institute"
-          description="Monkey Business Institute features over 35 talented performers with decades of experience in improv, acting, music, and film. Many members honed their craft with Madison’s ComedySportz before 2002 and have been performing together for over a decade. With a mix of seasoned pros and fresh talent, their shows guarantee smart, hilarious entertainment—served with pizza"
+          description={`Monkey Business Institute features over 35 talented performers with decades of experience in improv, acting, music, and film.`}
+          description2={`Many members honed their craft with Madison’s ComedySportz before 2002 and have been performing together for over a decade. With a mix of seasoned pros and fresh talent, their shows guarantee smart, hilarious entertainment—served with pizza`}
           links={[
             {
               icon: mbiLogo,
@@ -229,7 +231,13 @@ extra
           img={mcw}
           imgAlt="Madison Comedy Week Logo"
           title={`Madison Comedy Week`}
-          description={`Madison Comedy Week`}
+          description={`Our festival centers around the infrastructure that makes up the Madison comedy scene - a scene that stacks up to scenes in cities many times its size.`}
+
+          description2={`Our festival is held for 7 days in the summer, and features over 25 standup, improv, music and themed variety shows. This festival is a breeding ground for hilarious ideas. We are genuinely committed to making this experience ideal for all participants, performers and audience members, and we put our comics first.`}
+
+          description3={`Madison Comedy Week is an event that is diverse, accessible, and inclusive—showcasing the unique nature of comedy in Madison, Wisconsin and the various reasons why comedians from all over the country love to perform here.`}
+
+
           links={[
             {
               icon: web,

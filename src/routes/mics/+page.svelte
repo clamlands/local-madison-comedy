@@ -12,9 +12,6 @@
         Stay tuned to the Madison Area Comedy Network Facebook group for the most up to
         date information on new mics, pop-up mics, cancellations, and time changes.
       </p>
-      <a href="https://www.facebook.com/groups/186265104823579/" class="fb-link"
-        >Join Facebook Group</a
-      >
     </div>
   </section>
 

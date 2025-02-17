@@ -1,8 +1,7 @@
 <script>
   import { PUBLIC_GOOGLE_SHEETS_KEY } from '$env/static/public';
   import ComicCard from './ComicCard.svelte';
-  import noah from '$lib/images/noah-750.webp';
-  import eli from '$lib/images/EliWilz-750.webp';
+  import SubmitCard from './SubmitCard.svelte';
   import { onMount } from 'svelte';
 
   const comicObjectArray = $state([]);
@@ -49,12 +48,6 @@
     </p>
   </section>
   <section>
-    <!-- DO NOT DELETE: This works. It might fail if there's too many requests though -->
-    <!-- <img
-      src="https://drive.google.com/thumbnail?id=1Ysshpf-4OHmpPSdjHB4kJMYYKp_fHzV_&sz=w1000"
-      alt=""
-    /> -->
-
     <div class="comic-cards">
       {#each comicObjectArray as comicObject}
         <ComicCard
@@ -69,23 +62,6 @@
           website={comicObject.website}
         />
       {/each}
-
-      <!-- <ComicCard
-        img={noah}
-        name="Noah Mailloux"
-        insta="https://www.instagram.com/noahmailloux/"
-        email="noah.mailloux1@gmail.com"
-        clip="https://www.youtube.com/watch?v=FzSgMFVobT0"
-        bio="Noah Mailloux is a Madison, WI based comedian who relates to crowds using his honest and conversational style, with topics ranging from substance abuse and relationships to totally absurd takes on toothbrushes or stacking chairs. He hosts The Revolver Open Mic and produces several monthly showcases with Cheshire Cat Comedy spanning stand-up, improv, and music. He was selected to perform on the Best of the Fest showcase during Madison Comedy Week in 2024. A regular performer at Comedy on State and Comedy Cabin, Noah has opened for nationally recognized headliners including Kevin Bozeman, Chastity Washington, and Julio Diaz."
-      />
-      <ComicCard
-        img={eli}
-        name="Eli Wilz"
-        insta="https://www.instagram.com/eliwilz/"
-        email="eli@sillystreetcomedy.com"
-        clip="https://www.youtube.com/watch?v=iqOCiv-Sn1s"
-        bio="Eli Wilz is a stand-up comedian from Madison, WI. He has opened for comics you have heard of in rooms you think are interesting. He has also opened for comics you haven't heard in rooms that suck. In both scenarios, everyone thinks he did a really good job."
-      /> -->
     </div>
   </section>
 </div>
@@ -101,6 +77,13 @@
     padding: 30px;
     margin-bottom: 30px;
     text-align: center;
+  }
+
+  .comic-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
   }
 
   @keyframes pulsate-title {
@@ -130,9 +113,7 @@
   }
 
   .neon-title {
-    /* font-family: Sacramento; */
     font-family: 'Vibur';
-    /* font-family: 'Exo2'; */
     text-align: center;
     color: #fff;
     font-size: 6.2rem;
