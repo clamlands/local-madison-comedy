@@ -1,5 +1,5 @@
 <script>
-  let { img, title, description, links = [], imgAlt = '', flip = false } = $props();
+  let { img, title, description, description2, description3, links = [], imgAlt = '', flip = false } = $props();
 </script>
 
 <div class="extra-card {flip ? 'flip' : ''}">
@@ -7,6 +7,12 @@
   <div class="content">
     <h3>{title}</h3>
     <p>{description}</p>
+    {#if description2}
+      <p>{description2}</p>
+    {/if}
+    {#if description3}
+      <p>{description3}</p>
+    {/if}
     {#if links.length > 0}
       <strong>Listen/follow here:</strong>
       <div class="icon-links">
@@ -47,6 +53,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+  }
+
+  .content p {
+    margin: 0;
   }
 
   .icon-links {
