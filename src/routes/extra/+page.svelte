@@ -69,6 +69,8 @@ extra
   </nav>
 </section>
 
+<hr class="section-divider" />
+
 <div class="width-container">
   {#each sections as { id, title }}
     <section {id}>
@@ -240,7 +242,7 @@ extra
 
           links={[
             {
-              icon: web,
+              icon: mcw,
               url: 'https://madisoncomedyweek.com/',
               alt: 'Madison Comedy Week website',
             },
@@ -274,6 +276,14 @@ extra
     margin: 0 auto;
     padding: 2rem 0;
   }
+
+   .section-divider {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem 0;
+    width: 100%;
+  }
+
 
   @keyframes pulsate-title {
     100% {

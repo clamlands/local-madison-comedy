@@ -1,4 +1,5 @@
 <script>
+  import ShowCard from './ShowCard.svelte';
   import ccc from '$lib/images/shows/ccc.png';
   import cch from '$lib/images/shows/cch.png';
   import silly from '$lib/images/shows/silly.png';
@@ -10,143 +11,93 @@
   import cchIcon from '$lib/images/icons/cch-icon.png';
 </script>
 
+<section class="hero">
+  <h1 class="neon-title">Stand-up Shows</h1>
+  <p>
+    Madison’s comedy scene is packed with recurring shows every month, featuring stand-up, improv, and variety acts. Whether you're looking for a polished showcase or a laid-back open mic, there's something for everyone. Explore the production teams and shows below to find your next night of laughs!
+  </p>
+</section>
+
+<hr class="section-divider" />
+
 <div class="width-container">
-  <section class="hero">
-    <h1 class="neon-title">Stand-up Shows</h1>
-    <p>
-      There are many regularly occuring comedy shows in Madison every month. Check out the
-      production teams and shows below.
-    </p>
-  </section>
-  <section>
-    <div class="side-card">
-      <img src={ccc} alt="Cheshire Cat Comedy logo" />
-      <div class="content">
-        <h2>Cheshire Cat Comedy</h2>
-        <p>
-          Founded by Sasha Rosser and then bringing on producers Noah Mailloux, Josh Glen,
-          and Cody Lemke, Cheshire Cat Comedy brings live entertainment to venues across
-          the Madison area and beyond. Their shows feature stand-up, funny educational
-          lectures, live music, burlesque, drag, and more.
-        </p>
-        <strong>See more here:</strong>
-        <div class="icon-links">
-          <a href="https://cheshirecatcomedy.com/" target="_blank" rel="noreferrer">
-            <img src={cccIcon} alt="Cheshire Cat Comedy icon" />
-          </a>
-          <a
-            href="https://www.instagram.com/cheshirecatcomedyco/"
-            target="_blank"
-            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
-          >
-        </div>
-      </div>
-    </div>
+  <ShowCard
+    img={ccc}
+    title="Cheshire Cat Comedy"
+    description="Founded by Sasha Rosser and then bringing on producers Noah Mailloux, Josh Glen, and Cody Lemke, Cheshire Cat Comedy brings live entertainment to venues across the Madison area and beyond. Their shows feature stand-up, funny educational lectures, live music, burlesque, drag, and more."
+    links={[
+      {
+        icon: cccIcon,
+        url: 'https://cheshirecatcomedy.com/',
+        alt: 'Cheshire Cat Comedy website'
+      },
+      {
+        icon: insta,
+        url: 'https://www.instagram.com/cheshirecatcomedyco/',
+        alt: 'Instagram'
+      }
+    ]}
+  />
 
-    <hr class="narrow" />
+  <ShowCard
+    img={cch}
+    title="Capitol Comedy Hour"
+    description="Capitol Comedy Hour is a late-night style variety show produced by Matt Jordan and Andrew Rynning, featuring the writing, performing, filming, and editing contributions of many other comics in the scene."
+    links={[
+      {
+        icon: cchIcon,
+        url: 'https://www.capitolcomedyhour.com/',
+        alt: 'Capitol Comedy Hour website'
+      }
+    ]}
+    flip={true}
+  />
 
-    <div class="side-card flip">
-      <div class="content">
-        <h2>Capitol Comedy Hour</h2>
-        <p>
-          Capitol Comedy Hour is a late-night style variety show produced by Matt Jordan
-          and Andrew Rynning, featuring the writing, performing, filming, and editing
-          contributions of many other comics in the scene.
-        </p>
-        <strong>See more here:</strong>
-        <div class="icon-links">
-          <a href="https://www.capitolcomedyhour.com/" target="_blank" rel="noreferrer"
-            ><img src={cchIcon} alt="Capitol Comedy Hour icon" /></a
-          >
-        </div>
-      </div>
-      <img src={cch} alt="Capitol Comedy Hour logo" />
-    </div>
-
-    <hr class="narrow" />
-
-    <div class="side-card">
-      <img src={silly} alt="Silly Street Comedy logo" />
-      <div class="content">
-        <h2>Silly Street Comedy</h2>
-        <p>
-          Founded by Eli Wilz, Silly Street Comedy is a cooperative effort of local
-          comedians in Madison to bring great comedy to the Willy Street Neighborhood.
-        </p>
-        <strong>See more here:</strong>
-        <div class="icon-links">
-          <a
-            href="https://www.instagram.com/sillystreetcomedy/"
-            target="_blank"
-            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
-          >
-        </div>
-      </div>
-    </div>
-
-    <hr class="narrow" />
-
-    <div class="side-card flip">
-      <div class="content">
-        <h2>Comedy at the Cabaret</h2>
-        <p>
-          With a tenure of 6+ years, Comedy at The Cabaret is a monthly stand-up showcase
-          hosted by Allie Lindsay, with music by Jake Snell, at the wonderful North Street
-          Cabaret!
-        </p>
-        <strong>See more here:</strong>
-        <div class="icon-links">
-          <a
-            href="https://www.instagram.com/comedyatthecabaret/"
-            target="_blank"
-            rel="noreferrer"><img src={insta} alt="Instagram icon" /></a
-          >
-        </div>
-      </div>
-      <img src={cabaret} alt="Comedy at the Cabaret logo" />
-    </div>
-
-    <hr class="narrow" />
-
-    <div class="side-card">
-      <img src={donttell} alt="Don't Tell Comedy: Madison logo" />
-      <div class="content">
-        <h2>Don't Tell Comedy: Madison</h2>
-        <p>Secret Pop-Up Comedy Shows in Madison!</p>
-        <div class="icon-links">
-          <a
-            href="https://www.donttellcomedy.com/cities/madison/"
-            target="_blank"
-            rel="noreferrer"><img src={donttellIcon} alt="Don't Tell Comedy icon" /></a
-          >
-          <a
-            href="https://www.instagram.com/donttellmadison/"
-            target="_blank"
-            rel="noreferrer"><img src={insta} alt="Instagram logo" /></a
-          >
-        </div>
-      </div>
-    </div>
-
-    <hr class="narrow" />
-
-    <h2>Antoine</h2>
-    <h2>Chuky</h2>
-    <h2>Justin Frisque</h2>
-    <h2>Lady Laughs</h2>
-    <h2>Lisa Quam</h2>
-    <h2>The Merge</h2>
-    <h2>Gamma Ray stuff</h2>
-  </section>
+  <ShowCard
+    img={silly}
+    title="Silly Street Comedy"
+    description="Founded by Eli Wilz, Silly Street Comedy is a cooperative effort of local comedians in Madison to bring great comedy to the Willy Street Neighborhood."
+    links={[
+      {
+        icon: insta,
+        url: 'https://www.instagram.com/sillystreetcomedy/',
+        alt: 'Instagram'
+      }
+    ]}
+  />
+  <ShowCard
+    img={cabaret}
+    title="Comedy at the Cabaret"
+    description="With a tenure of 6+ years, Comedy at The Cabaret is a monthly stand-up showcase hosted by Allie Lindsay, with music by Jake Snell, at the wonderful North Street Cabaret!"
+    links={[
+      {
+        icon: insta,
+        url: 'https://www.instagram.com/comedyatthecabaret/',
+        alt: 'Instagram'
+      }
+    ]}
+    flip={true}
+  />
+  <ShowCard
+    img={donttell}
+    title="Don't Tell Madison"
+    description="Don't Tell Comedy hosts secret pop-up comedy shows in unique, unexpected venues. The lineup is a surprise, featuring top-tier comedians, and the location is revealed on the day of the show. It’s an intimate, one-of-a-kind comedy experience that brings laughter to unconventional spaces."
+    links={[
+      {
+        icon: donttell,
+        url: 'https://www.donttellcomedy.com/cities/madison/',
+        alt: 'Website'
+      },
+      {
+        icon: insta,
+        url: 'https://www.instagram.com/donttellmadison/',
+        alt: 'Instagram'
+      }
+    ]}
+  />
 </div>
 
 <style>
-  .width-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
-
   .hero {
     display: flex;
     flex-direction: column;
@@ -154,8 +105,22 @@
     align-items: center;
     margin-top: -15px;
     width: 100%;
-    padding-top: 30px;
+    padding: 30px;
     margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .width-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .section-divider {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem 0;
+    width: 100%;
   }
 
   @keyframes pulsate-title {
@@ -185,12 +150,10 @@
   }
 
   .neon-title {
-    /* font-family: Sacramento; */
     font-family: 'Vibur';
-    /* font-family: 'Exo2'; */
     text-align: center;
     color: #fff;
-    font-size: 5.9rem;
+    font-size: 6.2rem;
     font-weight: 400;
     animation: pulsate-title 1s infinite alternate;
     border: 0.2rem solid #fff;
@@ -204,16 +167,5 @@
       0 0 0.8rem var(--neon),
       0 0 2.8rem var(--neon),
       inset 0 0 1.3rem var(--neon);
-  }
-
-  .icon-links a img {
-    width: 32px;
-    height: 32px;
-  }
-
-  @media (min-width: 768px) {
-    .neon-title {
-      font-size: 6.2rem;
-    }
   }
 </style>
