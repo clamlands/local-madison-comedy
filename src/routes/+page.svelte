@@ -5,6 +5,7 @@
   import Dick11 from '$lib/images/homepage/Dick11.png';
   import Kayla from '$lib/images/homepage/Kayla.png';
   import SitDown from '$lib/images/homepage/SitDown.png';
+  import { fade } from 'svelte/transition';
 
   const allScenePhotos = [
     {
@@ -22,7 +23,6 @@
       alt: 'Kayla Ruth at Atlas Improv',
       caption: 'Kayla Ruth at Atlas Improv'
     },
-    // Placeholder photos - replace with real ones
     {
       src: SitDown,
       alt: 'Eli Wilz at Rigby',
@@ -30,24 +30,19 @@
     }
   ];
 
-  // Function to get n random items from an array
-  function getRandomItems(arr, n) {
-    const shuffled = [...arr].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, n);
+  function getRandomPhotos() {
+    const shuffled = [...allScenePhotos].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
   }
 
-  let currentIndex = 0;
-  let scenePhotos = getRandomItems(allScenePhotos, 3);
+  let displayedPhotos = getRandomPhotos();
 
-  function nextPhotos() {
-    currentIndex = (currentIndex + 3) % allScenePhotos.length;
-    scenePhotos = allScenePhotos.slice(currentIndex, currentIndex + 3).concat(allScenePhotos.slice(0, currentIndex)).slice(0, 3);
+  function shufflePhotos() {
+    displayedPhotos = getRandomPhotos();
   }
 
-  function previousPhotos() {
-    currentIndex = (currentIndex - 3 + allScenePhotos.length) % allScenePhotos.length;
-    scenePhotos = allScenePhotos.slice(currentIndex, currentIndex + 3).concat(allScenePhotos.slice(0, currentIndex)).slice(0, 3);
-  }
+  // Automatically shuffle every 5 seconds
+  setInterval(shufflePhotos, 5000);
 </script>
 
 <section class="hero">
@@ -56,16 +51,14 @@
 </section>
 
 <section class="photo-gallery">
-  <button class="nav-button prev" on:click={previousPhotos}>←</button>
   <div class="gallery-grid">
-    {#each scenePhotos as photo}
-      <div class="photo-frame">
+    {#each displayedPhotos as photo (photo.src)}
+      <div class="photo-frame" in:fade>
         <img src={photo.src} alt={photo.alt} />
         <div class="caption">{photo.caption}</div>
       </div>
     {/each}
   </div>
-  <button class="nav-button next" on:click={nextPhotos}>→</button>
 </section>
 
 <hr class="section-divider" />
@@ -89,16 +82,8 @@
       <p>Specials, podcasts, and more</p>
     </a>
   </section>
-  <!-- <section class="about-scene">
-    <div class="venue-highlights">
-      <h3>Key Venues</h3>
-      <ul>
-        <li><strong>Comedy on State</strong> - Madison's premier comedy club</li>
-        <li><strong>The Rigby</strong> - Weekly open mic for new talent</li>
-        <li><strong>The Argus</strong> - Weekly open mic for new talent</li>
-      </ul>
-    </div>
-  </section> -->
+
+  <hr class="section-divider" />
 
   <UpcomingShows />
 </div>
@@ -112,7 +97,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
   }
 
   .section-divider {
@@ -128,8 +113,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
-    transition: transform 0.3s ease;
-    overflow-x: auto;
+    overflow: hidden;
+    position: relative;
   }
 
   .photo-frame {
@@ -138,11 +123,6 @@
     border: 3px solid rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .photo-frame:hover {
-    transform: scale(1.02);
   }
 
   .photo-frame img {
@@ -216,40 +196,8 @@
     color: white;
   }
 
-  /* .width-container {
-    background-image: url('$lib/images/brick.jpg');
-  } */
-
-  @keyframes pulsate {
-    100% {
-      text-shadow:
-        0 0 3px #fff,
-        0 0 5px #fff,
-        0 0 7px #fff,
-        0 0 40px var(--neon),
-        0 0 80px var(--neon),
-        0 0 90px var(--neon),
-        0 0 100px var(--neon),
-        0 0 150px var(--neon);
-    }
-
-    0% {
-      text-shadow:
-        0 0 2px #fff,
-        0 0 4px #fff,
-        0 0 6px #fff,
-        0 0 10px var(--neon),
-        0 0 45px var(--neon),
-        0 0 55px var(--neon),
-        0 0 70px var(--neon),
-        0 0 80px var(--neon);
-    }
-  }
-
   .neon-title {
-    /* font-family: Sacramento; */
     font-family: 'Vibur';
-    /* font-family: 'Exo2'; */
     color: #fff;
     font-size: 6.2rem;
     font-weight: 400;
