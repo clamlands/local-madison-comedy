@@ -22,14 +22,15 @@
 <style>
   .show-card {
     display: flex;
-    gap: 20px;
-    margin-bottom: 0;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 30px;
-    align-items: start;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 24px;
+    margin: 30px 0;
+    padding: 24px;
+    border-radius: 12px;
+    overflow: hidden;
   }
-
+  
   .show-card.flip {
     flex-direction: row-reverse;
   }
@@ -39,13 +40,15 @@
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
+    flex-shrink: 0;
   }
 
   .content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    min-height: 300px; /* Match image height */
+    position: relative; /* For absolute positioning of icon links */
   }
 
   h2 {
@@ -61,7 +64,8 @@
   .icon-links {
     display: flex;
     gap: 20px;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
   }
 
   .icon-links a img {
@@ -83,6 +87,16 @@
     .show-card > img {
       width: 100%;
       height: auto;
+    }
+
+    .content {
+      min-height: auto;
+      padding-top: 16px;
+    }
+
+    .icon-links {
+      position: relative;
+      margin-top: 16px;
     }
   }
 </style>
