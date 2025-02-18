@@ -24,9 +24,9 @@
     display: flex;
     flex-direction: row;
     background: rgba(0, 0, 0, 0.3);
-    gap: 24px;
-    margin: 30px 0;
-    padding: 24px;
+    gap: 16px;
+    margin: 20px 0;
+    padding: 16px;
     border-radius: 12px;
     overflow: hidden;
   }
@@ -35,21 +35,22 @@
     flex-direction: row-reverse;
   }
 
-  .show-card > img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-
-  .content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 300px; /* Match image height */
-    position: relative; /* For absolute positioning of icon links */
-  }
+ .show-card > img {
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     border-radius: 8px;
+     flex-shrink: 0;
+ }
+ 
+ .content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     min-height: 200px;
+     max-height: 200px;
+     position: relative;
+ }
 
   h2 {
     margin: 0;
@@ -91,6 +92,7 @@
 
     .content {
       min-height: auto;
+      max-height: auto;
       padding-top: 16px;
     }
 
