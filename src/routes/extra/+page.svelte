@@ -46,7 +46,7 @@ extra
     },
     {
       id: 'comedy-week',
-      title: 'Madison Comedy Week',
+      title: 'Comedy Week',
       icon: '🎪',
     },
   ];
@@ -72,8 +72,11 @@ extra
 <hr class="section-divider" />
 
 <div class="width-container">
-  {#each sections as { id, title }}
+  {#each sections as { id, title }, i}
     <section {id}>
+      {#if i !== 0}
+        <hr class="section-divider" />
+      {/if}
       <h2>{title}</h2>
       {#if id === 'albums'}
         <ExtraCard
@@ -267,7 +270,7 @@ extra
     margin-top: -15px;
     width: 100%;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     text-align: center;
   }
 
@@ -277,13 +280,63 @@ extra
     padding: 2rem 0;
   }
 
-   .section-divider {
+  .section-divider {
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 2rem 0;
+    margin: 3rem 0 2rem;
     width: 100%;
   }
 
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 40px 0 0;
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-family: 'Vibur';
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+    animation: pulsate 1s infinite alternate;
+    margin: 50px 0 2rem;
+    text-align: center;
+  }
+
+  .neon-title {
+    font-family: 'Vibur';
+    text-align: center;
+    color: #fff;
+    font-size: 6.2rem;
+    font-weight: 400;
+    animation: pulsate-title 1s infinite alternate;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    box-shadow:
+      0 0 0.2rem #fff,
+      0 0 0.2rem #fff,
+      0 0 2rem var(--neon),
+      0 0 0.8rem var(--neon),
+      0 0 2.8rem var(--neon),
+      inset 0 0 1.3rem var(--neon);
+  }
+
+  .icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+
+  :global(.quick-link h3) {
+    font-size: 0.9em;
+  }
 
   @keyframes pulsate-title {
     100% {
@@ -309,50 +362,6 @@ extra
         0 0 70px var(--neon),
         0 0 80px var(--neon);
     }
-  }
-
-  .neon-title {
-    /* font-family: Sacramento; */
-    font-family: 'Vibur';
-    /* font-family: 'Exo2'; */
-    text-align: center;
-    color: #fff;
-    font-size: 6.2rem;
-    font-weight: 400;
-    animation: pulsate-title 1s infinite alternate;
-    border: 0.2rem solid #fff;
-    border-radius: 2rem;
-    padding: 30px 50px;
-    margin-bottom: 40px;
-    box-shadow:
-      0 0 0.2rem #fff,
-      0 0 0.2rem #fff,
-      0 0 2rem var(--neon),
-      0 0 0.8rem var(--neon),
-      0 0 2.8rem var(--neon),
-      inset 0 0 1.3rem var(--neon);
-  }
-
-  .quick-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 40px 0;
-  }
-
-  .icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-family: 'Vibur';
-    color: #fff;
-    font-size: 80px;
-    font-weight: 400;
-    animation: pulsate 1s infinite alternate;
-    margin: 50px 0 60px;
-    text-align: center;
   }
 
   @keyframes pulsate {

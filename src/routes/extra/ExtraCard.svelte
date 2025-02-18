@@ -14,7 +14,6 @@
       <p>{description3}</p>
     {/if}
     {#if links.length > 0}
-      <strong>Listen/follow here:</strong>
       <div class="icon-links">
         {#each links as { icon, url, alt }}
           <a href={url} target="_blank" rel="noreferrer">
@@ -29,12 +28,13 @@
 <style>
   .extra-card {
     display: flex;
-    gap: 20px;
-    margin-bottom: 0;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 30px;
-    align-items: start;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 16px;
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   .extra-card.flip {
@@ -42,26 +42,43 @@
   }
 
   .extra-card > img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
+    flex-shrink: 0;
   }
 
   .content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    min-height: 250px;
+    position: relative;
+    gap: 12px;
+    padding-bottom: 60px; /* Space for links */
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text);
   }
 
   .content p {
     margin: 0;
+    line-height: 1.5;
   }
 
   .icon-links {
     display: flex;
     gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    width: 100%;
   }
 
   .icon-links a img {
@@ -83,6 +100,19 @@
     .extra-card > img {
       width: 100%;
       height: auto;
+    }
+
+    .content {
+      min-height: auto;
+      padding-top: 16px;
+      padding-bottom: 0;
+    }
+
+    .icon-links {
+      position: relative;
+      margin-top: 16px;
+      padding-top: 0;
+      background: none;
     }
   }
 </style>

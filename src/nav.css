@@ -18,6 +18,20 @@ header {
 nav a {
   text-decoration: none;
   color: var(--text);
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  box-shadow: none;
+}
+
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
 }
 
 /* for when the burger menu is set up */
@@ -98,13 +112,7 @@ nav {
   }
 
   nav a:hover {
-    text-shadow:
-      0 0 3px #fff,
-      0 0 10px var(--neon),
-      0 0 20px var(--neon),
-      0 0 30px var(--neon),
-      0 0 50px var(--neon),
-      0 0 70px var(--neon);
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
   nav {
