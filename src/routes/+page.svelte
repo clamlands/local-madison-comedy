@@ -1,13 +1,11 @@
 <script>
   import UpcomingShows from './UpcomingShows.svelte';
-  import ComicCard from './comics/ComicCard.svelte';
   import BenDan from '$lib/images/homepage/DanBen.jpg';
   import Dick11 from '$lib/images/homepage/Dick11.png';
   import Kayla from '$lib/images/homepage/Kayla.png';
   import SitDown from '$lib/images/homepage/SitDown.png';
   import { fade } from 'svelte/transition';
   import { onDestroy } from 'svelte';
-
 
   const allScenePhotos = [
     {
@@ -76,7 +74,7 @@
 
 
 <style>
-.neon-title {
+  .neon-title {
     font-family: 'Vibur';
     color: #fff;
     font-size: 6.2rem;
@@ -122,14 +120,14 @@
 
   .photo-gallery {
     width: 100%;
-    max-width: 1400px;  /* Increased from 1200px to allow for larger screens */
+    max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;  /* Prevent vertical scrolling */
+    overflow: hidden;
   }
 
   .section-divider {
@@ -142,12 +140,12 @@
 
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));  /* Use minmax for better sizing */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
     overflow: hidden;
     position: relative;
-    width: 100%;  /* Ensure full width usage */
+    width: 100%;
   }
 
   .photo-frame {
@@ -156,15 +154,15 @@
     border: 3px solid rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     overflow: hidden;
-    height: auto;  /* Allow natural height */
-    max-height: 500px;  /* Prevent excessive height */
+    height: auto;
+    max-height: 500px;
   }
 
   .photo-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.01);  /* Prevent potential gap at edges */
+    transform: scale(1.01);
   }
 
   .caption {
@@ -179,89 +177,63 @@
     font-size: 0.9rem;
   }
 
-  .nav-button {
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    color: white;
-    font-size: 1.5rem;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 2;
-  }
-
-  .nav-button:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
-  }
-
   @media (max-width: 1024px) {
-  .photo-gallery {
-    max-width: 100%;
-    padding: 1rem;
+    .photo-gallery {
+      max-width: 100%;
+      padding: 1rem;
+    }
+    
+    .gallery-grid {
+      gap: 1rem;
+    }
+
+    .hero {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
   }
-  
-  .gallery-grid {
-    gap: 1rem;
+
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+      margin-top: -10px;
+    }
+
+    .photo-frame {
+      max-height: 450px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .photo-frame {
+      max-height: 400px;
+    }
+
+    .hero {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   .hero {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .nav-button {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  .hero {
-    margin-top: -10px;
+  .tagline {
+    color: white;
   }
-
-  .photo-frame {
-    max-height: 450px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-frame {
-    max-height: 400px;
-  }
-
-  .hero {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -15px;
-  width: 100%;
-  padding: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.tagline {
-  color: white;
-}
 </style>
