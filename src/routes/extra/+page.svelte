@@ -174,6 +174,12 @@ extra
           title="Capitol Comedy Hour"
           description="The sketches you’ve seen at Capitol Comedy Hour—now available on your computer. Capitol Comedy Hour is a comedy variety show inspired by late-night TV. These sketches were performed live at the show and are now posted here for you to enjoy."
           links={[
+          
+          {
+              icon: cch,
+              url: 'https://www.capitolcomedyhour.com/',
+              alt: 'Website',
+            },
             {
               icon: youtube,
               url: 'https://www.youtube.com/@CapitolComedyHour',
