@@ -54,7 +54,9 @@
 
 <section class="hero">
   <h1 class="neon-title">madison comedy</h1>
-  <p class="tagline">Your guide to Madison's comedy scene</p>
+  <p class="tagline">Madison, WI</p>
+  <p>Your Guide to Local Comedy</p>
+
 </section>
 
 <section class="photo-gallery">
@@ -70,30 +72,8 @@
 
 <hr class="section-divider" />
 
-<div class="width-container">
-  <section class="quick-links">
-    <a href="/mics" class="quick-link">
-      <h3>Open Mics</h3>
-      <p>Try your hand at stand-up</p>
-    </a>
-    <a href="/shows" class="quick-link">
-      <h3>Shows</h3>
-      <p>Upcoming comedy events</p>
-    </a>
-    <a href="/comics" class="quick-link">
-      <h3>Comics</h3>
-      <p>Meet local performers</p>
-    </a>
-    <a href="/extra" class="quick-link">
-      <h3>Extra</h3>
-      <p>Specials, podcasts, and more</p>
-    </a>
-  </section>
+<UpcomingShows />
 
-  <hr class="section-divider" />
-
-  <UpcomingShows />
-</div>
 
 <style>
 .neon-title {
