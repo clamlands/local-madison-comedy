@@ -194,8 +194,13 @@
   }
 
   @media (min-width: 768px) {
+    section {
+      max-width: 1600px;
+    }
+
     .show-cards {
       width: 100%;
+
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       grid-auto-rows: max-content;

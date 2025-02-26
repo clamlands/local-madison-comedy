@@ -33,7 +33,7 @@
         </tr>
         <tr>
           <td>Tuesday</td>
-          <td>Argus Underground</td>
+          <td>Argus BarGrille</td>
           <td>8:00 PM</td>
         </tr>
         <tr>
@@ -57,7 +57,7 @@
     <a href="https://instagram.com/madisoncomedy" class="quick-link">
       <h3>Instagram</h3>
     </a>
-     <a href="https://instagram.com/madisoncomedy" class="quick-link">
+    <a href="https://instagram.com/madisoncomedy" class="quick-link">
       <h3>Discord</h3>
     </a>
   </section>
@@ -131,7 +131,7 @@
     align-items: center;
     margin-top: -15px;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 20px;
   }
 
@@ -149,7 +149,8 @@
     overflow: hidden;
   }
 
-  th, td {
+  th,
+  td {
     padding: 12px 16px;
     text-align: left;
     border-bottom: 1px solid var(--border);
@@ -199,7 +200,7 @@
     font-family: 'Vibur';
     text-align: center;
     color: #fff;
-    font-size: 4.8rem;
+    font-size: 75px;
     font-weight: 400;
     animation: pulsate-title 1s infinite alternate;
     border: 0.2rem solid #fff;

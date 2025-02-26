@@ -29,6 +29,9 @@
 <style>
   .show-card {
     margin-bottom: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 8px;
   }
 
   img {

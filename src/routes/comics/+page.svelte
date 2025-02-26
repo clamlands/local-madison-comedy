@@ -123,7 +123,7 @@
     font-family: 'Vibur';
     text-align: center;
     color: #fff;
-    font-size: 6.2rem;
+    font-size: 75px;
     font-weight: 400;
     animation: pulsate-title 1s infinite alternate;
     border: 0.2rem solid #fff;
@@ -137,5 +137,10 @@
       0 0 0.8rem var(--neon),
       0 0 2.8rem var(--neon),
       inset 0 0 1.3rem var(--neon);
+  }
+  @media (min-width: 768px) {
+    .neon-title {
+      font-size: 6.2rem;
+    }
   }
 </style>

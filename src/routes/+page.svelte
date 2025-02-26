@@ -5,35 +5,91 @@
   import Dick11 from '$lib/images/homepage/Dick11.png';
   import Kayla from '$lib/images/homepage/Kayla.png';
   import SitDown from '$lib/images/homepage/SitDown.png';
+  import craig from '$lib/images/homepage/t5.webp';
+  import noahV from '$lib/images/homepage/t15.webp';
+  import kaylaWWN from '$lib/images/homepage/t10.webp';
+  import ARJ from '$lib/images/homepage/t0.webp';
+  import noahM from '$lib/images/homepage/t1.webp';
+  import david from '$lib/images/homepage/t6.webp';
+  import sasha from '$lib/images/homepage/t8.webp';
+  import josh from '$lib/images/homepage/t11.webp';
+
   import { fade } from 'svelte/transition';
   import { onDestroy } from 'svelte';
 
-
   const allScenePhotos = [
+    // {
+    //   src: BenDan,
+    //   alt: "Ben O'Connell and Dan Gantman at the Rigby",
+    //   caption: "Ben O'Connell and Dan Gantman at the Rigby",
+    //   order: 1, // Add fixed order
+    // },
+    // {
+    //   src: Dick11,
+    //   alt: 'Owen Joyner and Rory Rusch at Madisons',
+    //   caption: 'Owen Joyner and Rory Rusch at Madisons',
+    //   order: 2,
+    // },
+    // {
+    //   src: Kayla,
+    //   alt: 'Kayla Ruth at Atlas Improv',
+    //   caption: 'Kayla Ruth at Atlas Improv',
+    //   order: 3,
+    // },
+    // {
+    //   src: SitDown,
+    //   alt: 'Eli Wilz at Rigby',
+    //   caption: 'Eli Wilz at Rigby',
+    //   order: 4,
+    // },
     {
-      src: BenDan,
-      alt: "Ben O'Connell and Dan Gantman at the Rigby",
-      caption: "Ben O'Connell and Dan Gantman at the Rigby",
-      order: 1  // Add fixed order
+      src: craig,
+      alt: 'Craig Smith at Crucible',
+      caption: 'Craig Smith at Crucible',
+      order: 5,
     },
     {
-      src: Dick11,
-      alt: 'Owen Joyner and Rory Rusch at Madisons',
-      caption: 'Owen Joyner and Rory Rusch at Madisons',
-      order: 2
+      src: noahV,
+      alt: 'Noah Van Der Weide at Forward Club',
+      caption: 'Noah Van Der Weide at Forward Club',
+      order: 6,
     },
     {
-      src: Kayla,
-      alt: 'Kayla Ruth at Atlas Improv',
-      caption: 'Kayla Ruth at Atlas Improv',
-      order: 3
+      src: kaylaWWN,
+      alt: 'Kayla Ruth at Crucible',
+      caption: 'Kayla Ruth at Crucible',
+      order: 7,
     },
     {
-      src: SitDown,
-      alt: 'Eli Wilz at Rigby',
-      caption: 'Eli Wilz at Rigby',
-      order: 4
-    }
+      src: ARJ,
+      alt: 'ARJ at Crucible',
+      caption: 'ARJ at Crucible',
+      order: 8,
+    },
+    {
+      src: noahM,
+      alt: 'Noah Mailloux at Crucible',
+      caption: 'Noah Mailloux at Crucible',
+      order: 9,
+    },
+    {
+      src: david,
+      alt: 'David Schendlinger at Crucible',
+      caption: 'David Schendlinger at Crucible',
+      order: 10,
+    },
+    {
+      src: sasha,
+      alt: 'Sasha Rosser at Crucible',
+      caption: 'Sasha Rosser at Crucible',
+      order: 11,
+    },
+    {
+      src: josh,
+      alt: 'Josh Glen at Cardinal Bar',
+      caption: 'Josh Glen at Cardinal Bar',
+      order: 12,
+    },
   ];
 
   function getRandomPhotos() {
@@ -56,7 +112,6 @@
   <h1 class="neon-title">madison comedy</h1>
   <p class="tagline">Madison, WI</p>
   <p>Your Guide to Local Comedy</p>
-
 </section>
 
 <section class="photo-gallery">
@@ -74,9 +129,8 @@
 
 <UpcomingShows />
 
-
 <style>
-.neon-title {
+  .neon-title {
     font-family: 'Vibur';
     color: #fff;
     font-size: 6.2rem;
@@ -122,14 +176,14 @@
 
   .photo-gallery {
     width: 100%;
-    max-width: 1400px;  /* Increased from 1200px to allow for larger screens */
+    max-width: 1400px; /* Increased from 1200px to allow for larger screens */
     margin: 0 auto;
     padding: 2rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;  /* Prevent vertical scrolling */
+    overflow: hidden; /* Prevent vertical scrolling */
   }
 
   .section-divider {
@@ -142,29 +196,30 @@
 
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));  /* Use minmax for better sizing */
-    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Use minmax for better sizing */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
     margin-bottom: 3rem;
     overflow: hidden;
     position: relative;
-    width: 100%;  /* Ensure full width usage */
+    width: 100%; /* Ensure full width usage */
   }
 
   .photo-frame {
     position: relative;
     aspect-ratio: 2/3;
-    border: 3px solid rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
     overflow: hidden;
-    height: auto;  /* Allow natural height */
-    max-height: 500px;  /* Prevent excessive height */
+    height: auto; /* Allow natural height */
+    /* max-height: 500px; Prevent excessive height */
   }
 
   .photo-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.01);  /* Prevent potential gap at edges */
+    transform: scale(1.01); /* Prevent potential gap at edges */
   }
 
   .caption {
@@ -202,66 +257,66 @@
   }
 
   @media (max-width: 1024px) {
-  .photo-gallery {
-    max-width: 100%;
-    padding: 1rem;
+    .photo-gallery {
+      max-width: 100%;
+      padding: 1rem;
+    }
+
+    .gallery-grid {
+      gap: 1rem;
+    }
+
+    .hero {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
   }
-  
-  .gallery-grid {
-    gap: 1rem;
+
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-button {
+      display: none;
+    }
+
+    .hero {
+      margin-top: -10px;
+    }
+
+    /* .photo-frame {
+      max-height: 450px;
+    } */
+  }
+
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* .photo-frame {
+      max-height: 400px;
+    } */
+
+    .hero {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   .hero {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .nav-button {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  .hero {
-    margin-top: -10px;
+  .tagline {
+    color: white;
   }
-
-  .photo-frame {
-    max-height: 450px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-frame {
-    max-height: 400px;
-  }
-
-  .hero {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -15px;
-  width: 100%;
-  padding: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.tagline {
-  color: white;
-}
 </style>

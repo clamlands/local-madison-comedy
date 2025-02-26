@@ -6,6 +6,8 @@
   import cabaret from '$lib/images/shows/cabaret.png';
   import donttell from '$lib/images/shows/donttell.png';
   import donttellIcon from '$lib/images/icons/donttell-icon.png';
+  import oneMotion from '$lib/images/shows/1motion.png';
+
   import cccIcon from '$lib/images/icons/ccc.png';
   import insta from '$lib/images/icons/ig.png';
   import cchIcon from '$lib/images/icons/cch-icon.png';
@@ -14,7 +16,10 @@
 <section class="hero">
   <h1 class="neon-title">Stand-up Shows</h1>
   <p>
-    Madison’s comedy scene is packed with recurring shows every month, featuring stand-up, improv, and variety acts. Whether you're looking for a polished showcase or a laid-back open mic, there's something for everyone. Explore the production teams and shows below to find your next night of laughs!
+    Madison’s comedy scene is packed with recurring shows every month, featuring stand-up,
+    improv, and variety acts. Whether you're looking for a polished showcase or a
+    laid-back open mic, there's something for everyone. Explore the production teams and
+    shows below to find your next night of laughs!
   </p>
 </section>
 
@@ -29,13 +34,13 @@
       {
         icon: cccIcon,
         url: 'https://cheshirecatcomedy.com/',
-        alt: 'Cheshire Cat Comedy website'
+        alt: 'Cheshire Cat Comedy website',
       },
       {
         icon: insta,
         url: 'https://www.instagram.com/cheshirecatcomedyco/',
-        alt: 'Instagram'
-      }
+        alt: 'Instagram',
+      },
     ]}
   />
 
@@ -47,8 +52,8 @@
       {
         icon: cchIcon,
         url: 'https://www.capitolcomedyhour.com/',
-        alt: 'Capitol Comedy Hour website'
-      }
+        alt: 'Capitol Comedy Hour website',
+      },
     ]}
     flip={true}
   />
@@ -61,8 +66,8 @@
       {
         icon: insta,
         url: 'https://www.instagram.com/sillystreetcomedy/',
-        alt: 'Instagram'
-      }
+        alt: 'Instagram',
+      },
     ]}
   />
   <ShowCard
@@ -73,8 +78,8 @@
       {
         icon: insta,
         url: 'https://www.instagram.com/comedyatthecabaret/',
-        alt: 'Instagram'
-      }
+        alt: 'Instagram',
+      },
     ]}
     flip={true}
   />
@@ -86,14 +91,27 @@
       {
         icon: donttell,
         url: 'https://www.donttellcomedy.com/cities/madison/',
-        alt: 'Website'
+        alt: 'Website',
       },
       {
         icon: insta,
         url: 'https://www.instagram.com/donttellmadison/',
-        alt: 'Instagram'
-      }
+        alt: 'Instagram',
+      },
     ]}
+  />
+  <ShowCard
+    img={oneMotion}
+    title="Comedy Poetry Jam"
+    description="Madison's most diverse comedy & poetry showcase occurs on the 4th Saturday of every month—hosted by comedian Antoine McNeail through his production company 1Motion Out Reach Enterprise."
+    links={[
+      {
+        icon: insta,
+        url: 'https://www.instagram.com/comedyandpoetryjam',
+        alt: 'Instagram',
+      },
+    ]}
+    flip={true}
   />
 </div>
 
@@ -153,7 +171,7 @@
     font-family: 'Vibur';
     text-align: center;
     color: #fff;
-    font-size: 6.2rem;
+    font-size: 75px;
     font-weight: 400;
     animation: pulsate-title 1s infinite alternate;
     border: 0.2rem solid #fff;
@@ -167,5 +185,11 @@
       0 0 0.8rem var(--neon),
       0 0 2.8rem var(--neon),
       inset 0 0 1.3rem var(--neon);
+  }
+
+  @media (min-width: 768px) {
+    .neon-title {
+      font-size: 6.2rem;
+    }
   }
 </style>

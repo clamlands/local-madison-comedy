@@ -174,8 +174,7 @@ extra
           title="Capitol Comedy Hour"
           description="The sketches you’ve seen at Capitol Comedy Hour—now available on your computer. Capitol Comedy Hour is a comedy variety show inspired by late-night TV. These sketches were performed live at the show and are now posted here for you to enjoy."
           links={[
-          
-          {
+            {
               icon: cch,
               url: 'https://www.capitolcomedyhour.com/',
               alt: 'Website',
@@ -243,12 +242,8 @@ extra
           imgAlt="Madison Comedy Week Logo"
           title={`Madison Comedy Week`}
           description={`Our festival centers around the infrastructure that makes up the Madison comedy scene - a scene that stacks up to scenes in cities many times its size.`}
-
           description2={`Our festival is held for 7 days in the summer, and features over 25 standup, improv, music and themed variety shows. This festival is a breeding ground for hilarious ideas. We are genuinely committed to making this experience ideal for all participants, performers and audience members, and we put our comics first.`}
-
           description3={`Madison Comedy Week is an event that is diverse, accessible, and inclusive—showcasing the unique nature of comedy in Madison, Wisconsin and the various reasons why comedians from all over the country love to perform here.`}
-
-
           links={[
             {
               icon: mcw,
@@ -301,6 +296,10 @@ extra
     width: 100%;
   }
 
+  .quick-link {
+    height: 100%;
+  }
+
   section {
     margin-bottom: 0;
   }
@@ -319,7 +318,7 @@ extra
     font-family: 'Vibur';
     text-align: center;
     color: #fff;
-    font-size: 6.2rem;
+    font-size: 75px;
     font-weight: 400;
     animation: pulsate-title 1s infinite alternate;
     border: 0.2rem solid #fff;
@@ -393,6 +392,11 @@ extra
         0 0 55px var(--neon2),
         0 0 70px var(--neon2),
         0 0 80px var(--neon2);
+    }
+  }
+  @media (min-width: 768px) {
+    .neon-title {
+      font-size: 6.2rem;
     }
   }
 </style>
