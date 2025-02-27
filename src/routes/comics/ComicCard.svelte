@@ -1,13 +1,14 @@
 <script>
-  let { img, name, bio, clip, insta, facebook, youtube, email, website } = $props();
-  
+  let { img, name, bio, clip, insta, facebook, youtube, tiktok, email, website } =
+    $props();
+
   const imgId = img.split('?id=')[1];
   const shouldTruncate = bio.length > 400;
   let isExpanded = $state(false);
-  
-  let displayedBio = $derived(shouldTruncate && !isExpanded 
-    ? bio.slice(0, 400) + '...'
-    : bio);
+
+  let displayedBio = $derived(
+    shouldTruncate && !isExpanded ? bio.slice(0, 400) + '...' : bio,
+  );
 
   function toggleExpand() {
     isExpanded = !isExpanded;
@@ -16,10 +17,7 @@
 
 <div class="comic-card">
   <div class="image-container">
-    <img
-      src={`https://drive.google.com/thumbnail?id=${imgId}&sz=w1000`}
-      alt={name}
-    />
+    <img src={`https://drive.google.com/thumbnail?id=${imgId}&sz=w1000`} alt={name} />
   </div>
   <div class="details">
     <h3>{name}</h3>
@@ -37,6 +35,9 @@
       {/if}
       {#if insta}
         <a href={insta} target="_blank" rel="noreferrer">Instagram</a>
+      {/if}
+      {#if tiktok}
+        <a href={tiktok} target="_blank" rel="noreferrer">TikTok</a>
       {/if}
       {#if facebook}
         <a href={facebook} target="_blank" rel="noreferrer">Facebook</a>

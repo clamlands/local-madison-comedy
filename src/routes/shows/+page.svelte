@@ -25,95 +25,97 @@
 
 <hr class="section-divider" />
 
-<div class="width-container">
-  <ShowCard
-    img={ccc}
-    title="Cheshire Cat Comedy"
-    description="Founded by Sasha Rosser and then bringing on producers Noah Mailloux, Josh Glen, and Cody Lemke, Cheshire Cat Comedy brings live entertainment to venues across the Madison area and beyond. Their shows feature stand-up, funny educational lectures, live music, burlesque, drag, and more."
-    links={[
-      {
-        icon: cccIcon,
-        url: 'https://cheshirecatcomedy.com/',
-        alt: 'Cheshire Cat Comedy website',
-      },
-      {
-        icon: insta,
-        url: 'https://www.instagram.com/cheshirecatcomedyco/',
-        alt: 'Instagram',
-      },
-    ]}
-  />
+<section>
+  <div class="width-container">
+    <ShowCard
+      img={ccc}
+      title="Cheshire Cat Comedy"
+      description="Founded by Sasha Rosser and then bringing on producers Noah Mailloux, Josh Glen, and Cody Lemke, Cheshire Cat Comedy brings live entertainment to venues across the Madison area and beyond. Their shows feature stand-up, funny educational lectures, live music, burlesque, drag, and more."
+      links={[
+        {
+          icon: cccIcon,
+          url: 'https://cheshirecatcomedy.com/',
+          alt: 'Cheshire Cat Comedy website',
+        },
+        {
+          icon: insta,
+          url: 'https://www.instagram.com/cheshirecatcomedyco/',
+          alt: 'Instagram',
+        },
+      ]}
+    />
 
-  <ShowCard
-    img={cch}
-    title="Capitol Comedy Hour"
-    description="Capitol Comedy Hour is a late-night style variety show produced by Matt Jordan and Andrew Rynning, featuring the writing, performing, filming, and editing contributions of many other comics in the scene."
-    links={[
-      {
-        icon: cchIcon,
-        url: 'https://www.capitolcomedyhour.com/',
-        alt: 'Capitol Comedy Hour website',
-      },
-    ]}
-    flip={true}
-  />
+    <ShowCard
+      img={cch}
+      title="Capitol Comedy Hour"
+      description="Capitol Comedy Hour is a late-night style variety show produced by Matt Jordan and Andrew Rynning, featuring the writing, performing, filming, and editing contributions of many other comics in the scene."
+      links={[
+        {
+          icon: cchIcon,
+          url: 'https://www.capitolcomedyhour.com/',
+          alt: 'Capitol Comedy Hour website',
+        },
+      ]}
+      flip={true}
+    />
 
-  <ShowCard
-    img={silly}
-    title="Silly Street Comedy"
-    description="Founded by Eli Wilz, Silly Street Comedy is a cooperative effort of local comedians in Madison to bring great comedy to the Willy Street Neighborhood."
-    links={[
-      {
-        icon: insta,
-        url: 'https://www.instagram.com/sillystreetcomedy/',
-        alt: 'Instagram',
-      },
-    ]}
-  />
-  <ShowCard
-    img={cabaret}
-    title="Comedy at the Cabaret"
-    description="With a tenure of 6+ years, Comedy at The Cabaret is a monthly stand-up showcase hosted by Allie Lindsay, with music by Jake Snell, at the wonderful North Street Cabaret!"
-    links={[
-      {
-        icon: insta,
-        url: 'https://www.instagram.com/comedyatthecabaret/',
-        alt: 'Instagram',
-      },
-    ]}
-    flip={true}
-  />
-  <ShowCard
-    img={donttell}
-    title="Don't Tell Madison"
-    description="Don't Tell Comedy hosts secret pop-up comedy shows in unique, unexpected venues. The lineup is a surprise, featuring top-tier comedians, and the location is revealed on the day of the show. It’s an intimate, one-of-a-kind comedy experience that brings laughter to unconventional spaces."
-    links={[
-      {
-        icon: donttell,
-        url: 'https://www.donttellcomedy.com/cities/madison/',
-        alt: 'Website',
-      },
-      {
-        icon: insta,
-        url: 'https://www.instagram.com/donttellmadison/',
-        alt: 'Instagram',
-      },
-    ]}
-  />
-  <ShowCard
-    img={oneMotion}
-    title="Comedy Poetry Jam"
-    description="Madison's most diverse comedy & poetry showcase occurs on the 4th Saturday of every month—hosted by comedian Antoine McNeail through his production company 1Motion Out Reach Enterprise."
-    links={[
-      {
-        icon: insta,
-        url: 'https://www.instagram.com/comedyandpoetryjam',
-        alt: 'Instagram',
-      },
-    ]}
-    flip={true}
-  />
-</div>
+    <ShowCard
+      img={silly}
+      title="Silly Street Comedy"
+      description="Founded by Eli Wilz, Silly Street Comedy is a cooperative effort of local comedians in Madison to bring great comedy to the Willy Street Neighborhood."
+      links={[
+        {
+          icon: insta,
+          url: 'https://www.instagram.com/sillystreetcomedy/',
+          alt: 'Instagram',
+        },
+      ]}
+    />
+    <ShowCard
+      img={cabaret}
+      title="Comedy at the Cabaret"
+      description="With a tenure of 6+ years, Comedy at The Cabaret is a monthly stand-up showcase hosted by Allie Lindsay, with music by Jake Snell, at the wonderful North Street Cabaret!"
+      links={[
+        {
+          icon: insta,
+          url: 'https://www.instagram.com/comedyatthecabaret/',
+          alt: 'Instagram',
+        },
+      ]}
+      flip={true}
+    />
+    <ShowCard
+      img={donttell}
+      title="Don't Tell Madison"
+      description="Don't Tell Comedy hosts secret pop-up comedy shows in unique, unexpected venues. The lineup is a surprise, featuring top-tier comedians, and the location is revealed on the day of the show. It’s an intimate, one-of-a-kind comedy experience that brings laughter to unconventional spaces."
+      links={[
+        {
+          icon: donttell,
+          url: 'https://www.donttellcomedy.com/cities/madison/',
+          alt: 'Website',
+        },
+        {
+          icon: insta,
+          url: 'https://www.instagram.com/donttellmadison/',
+          alt: 'Instagram',
+        },
+      ]}
+    />
+    <ShowCard
+      img={oneMotion}
+      title="Comedy Poetry Jam"
+      description="Madison's most diverse comedy & poetry showcase occurs on the 4th Saturday of every month—hosted by comedian Antoine McNeail through his production company 1Motion Out Reach Enterprise."
+      links={[
+        {
+          icon: insta,
+          url: 'https://www.instagram.com/comedyandpoetryjam',
+          alt: 'Instagram',
+        },
+      ]}
+      flip={true}
+    />
+  </div>
+</section>
 
 <style>
   .hero {

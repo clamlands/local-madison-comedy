@@ -290,13 +290,16 @@ extra
 
   .quick-links {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 40px 0 0;
     width: 100%;
   }
 
   .quick-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
   }
 
@@ -397,6 +400,10 @@ extra
   @media (min-width: 768px) {
     .neon-title {
       font-size: 6.2rem;
+    }
+
+    .quick-links {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 </style>

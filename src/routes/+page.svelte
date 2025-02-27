@@ -109,9 +109,26 @@
 </script>
 
 <section class="hero">
-  <h1 class="neon-title">madison comedy</h1>
+  <h1 class="neon-title">Madison Comedy</h1>
   <p class="tagline">Madison, WI</p>
   <p>Your Guide to Local Comedy</p>
+</section>
+
+<section class="quick-links-container">
+  <nav class="quick-links">
+    <a href="/mics" class="quick-link">
+      <h3>Open Mics</h3>
+    </a>
+    <a href="/shows" class="quick-link">
+      <h3>Shows</h3>
+    </a>
+    <a href="/comics" class="quick-link">
+      <h3>Comics</h3>
+    </a>
+    <a href="/extra" class="quick-link">
+      <h3>Extra</h3>
+    </a>
+  </nav>
 </section>
 
 <section class="photo-gallery">
@@ -172,6 +189,22 @@
         0 0 70px var(--neon),
         0 0 80px var(--neon);
     }
+  }
+
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .quick-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
   .photo-gallery {
@@ -254,6 +287,17 @@
   .nav-button:hover {
     background: rgba(0, 0, 0, 0.8);
     transform: scale(1.1);
+  }
+
+  @media (min-width: 768px) {
+    .quick-links-container {
+      max-width: 1400px;
+      padding: 2rem;
+    }
+
+    .quick-links {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   @media (max-width: 1024px) {

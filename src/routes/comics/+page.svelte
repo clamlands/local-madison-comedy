@@ -13,6 +13,8 @@
     const json = await response.json();
     const rows = json.values;
     converToObjects(rows);
+    //sort alphabetically by name
+    comicObjectArray.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   function converToObjects(rows) {
@@ -31,6 +33,7 @@
         youtube: row[7],
         website: row[8],
         clip: row[9],
+        tiktok: row[10],
       };
       comicObjectArray.push(comicObj);
     });
@@ -56,6 +59,7 @@
           bio={comicObject.bio}
           clip={comicObject.clip}
           insta={comicObject.insta}
+          tiktok={comicObject.tiktok}
           facebook={comicObject.facebook}
           youtube={comicObject.youtube}
           email={comicObject.email}

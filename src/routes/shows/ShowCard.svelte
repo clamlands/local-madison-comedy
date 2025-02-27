@@ -30,27 +30,26 @@
     border-radius: 12px;
     overflow: hidden;
   }
-  
+
   .show-card.flip {
     flex-direction: row-reverse;
   }
 
- .show-card > img {
-     width: 200px;
-     height: 200px;
-     object-fit: cover;
-     border-radius: 8px;
-     flex-shrink: 0;
- }
- 
- .content {
-     flex: 1;
-     display: flex;
-     flex-direction: column;
-     min-height: 200px;
-     max-height: 200px;
-     position: relative;
- }
+  .show-card > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    position: relative;
+  }
 
   h2 {
     margin: 0;
