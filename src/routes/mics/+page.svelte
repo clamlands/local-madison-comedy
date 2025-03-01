@@ -1,6 +1,7 @@
 <script>
   import state from '$lib/images/mics/state.webp';
   import argus from '$lib/images/mics/argus.jpg';
+  import rigby from '$lib/images/mics/rigby.jpg';
   import rooster from '$lib/images/mics/rooster.jpg';
   import OpenMicCard from './OpenMicCard.svelte';
 </script>
@@ -38,7 +39,7 @@
         </tr>
         <tr>
           <td>Wednesday</td>
-          <td>Comedy onState</td>
+          <td>Comedy on State</td>
           <td>9:00 PM</td>
         </tr>
         <tr>
@@ -113,7 +114,7 @@
       signup="7:30 PM"
       host=""
       description="Every week a new host picks a theme or gimmick for the comics to prepare for. The theme is posted ahead of time day-of on the Facebook group. Past themes have included 'Yo mama' jokes, Roast Mic, Random Wikipedia Article, Ohio, and tons more."
-      image={argus}
+      image={rigby}
     />
   </section>
   <hr />

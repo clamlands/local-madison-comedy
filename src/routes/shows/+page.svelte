@@ -74,7 +74,7 @@
     <ShowCard
       img={cabaret}
       title="Comedy at the Cabaret"
-      description="With a tenure of 6+ years, Comedy at The Cabaret is a monthly stand-up showcase hosted by Allie Lindsay, with music by Jake Snell, at the wonderful North Street Cabaret!"
+      description="With a tenure of 7 years, Comedy at The Cabaret is a monthly stand-up showcase hosted by Allie Lindsay, with music by Jake Snell, at the wonderful North Street Cabaret!"
       links={[
         {
           icon: insta,
@@ -90,7 +90,7 @@
       description="Don't Tell Comedy hosts secret pop-up comedy shows in unique, unexpected venues. The lineup is a surprise, featuring top-tier comedians, and the location is revealed on the day of the show. It’s an intimate, one-of-a-kind comedy experience that brings laughter to unconventional spaces."
       links={[
         {
-          icon: donttell,
+          icon: donttellIcon,
           url: 'https://www.donttellcomedy.com/cities/madison/',
           alt: 'Website',
         },

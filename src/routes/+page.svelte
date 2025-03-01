@@ -117,15 +117,19 @@
 <section class="quick-links-container">
   <nav class="quick-links">
     <a href="/mics" class="quick-link">
+      <span class="icon">🎤</span>
       <h3>Open Mics</h3>
     </a>
     <a href="/shows" class="quick-link">
+      <span class="icon">🏟️</span>
       <h3>Shows</h3>
     </a>
     <a href="/comics" class="quick-link">
+      <span class="icon">🤡</span>
       <h3>Comics</h3>
     </a>
     <a href="/extra" class="quick-link">
+      <span class="icon">✳️</span>
       <h3>Extra</h3>
     </a>
   </nav>
@@ -205,6 +209,11 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+  }
+
+  .icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
   }
 
   .photo-gallery {
