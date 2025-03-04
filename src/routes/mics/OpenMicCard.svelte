@@ -14,8 +14,8 @@
     <h3>{venue}</h3>
     <div class="mic-details">
       {#if time}<p class="time">{time}</p>{/if}
-      {#if host}<p class="host">Hosted by {host}</p>{/if}
       {#if signup}<p class="signup">{@html signup}</p>{/if}
+      {#if host}<p class="host">Hosted by {host}</p>{/if}
     </div>
     <p class="description">{description}</p>
   </div>

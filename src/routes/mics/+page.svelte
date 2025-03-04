@@ -3,6 +3,7 @@
   import argus from '$lib/images/mics/argus.jpg';
   import rigby from '$lib/images/mics/rigby.jpg';
   import rooster from '$lib/images/mics/rooster.jpg';
+  import tinys from '$lib/images/mics/tinys.jpg';
   import OpenMicCard from './OpenMicCard.svelte';
 </script>
 
@@ -11,8 +12,13 @@
     <h1 class="neon-title">Weekly Open Mics</h1>
     <div class="notice">
       <p>
-        Stay tuned to the Madison Area Comedy Network Facebook group for the most up to
-        date information on new mics, pop-up mics, cancellations, and time changes.
+        Stay tuned to the <a
+          href="https://www.facebook.com/groups/186265104823579/"
+          target="_blank"
+          rel="noreferrer"
+          class="facebook-link">Madison Area Comedy Network Facebook group</a
+        > for the most up to date information on new mics, pop-up mics, cancellations, and
+        time changes.
       </p>
     </div>
   </section>
@@ -31,6 +37,11 @@
           <td>Monday</td>
           <td>Red Rooster</td>
           <td>7:30 PM</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Tiny's Tap House</td>
+          <td>9:00 PM</td>
         </tr>
         <tr>
           <td>Tuesday</td>
@@ -52,15 +63,25 @@
   </section>
 
   <section class="quick-links">
-    <a href="https://www.facebook.com/groups/186265104823579/" class="quick-link">
+    <a
+      href="https://www.facebook.com/groups/186265104823579/"
+      target="_blank"
+      rel="noreferrer"
+      class="quick-link"
+    >
       <h3>Join Facebook Group</h3>
     </a>
-    <a href="https://instagram.com/madisoncomedy" class="quick-link">
+    <a
+      href="https://instagram.com/madisoncomedy"
+      target="_blank"
+      rel="noreferrer"
+      class="quick-link"
+    >
       <h3>Instagram</h3>
     </a>
-    <a href="https://instagram.com/madisoncomedy" class="quick-link">
+    <!-- <a href="https://instagram.com/madisoncomedy" class="quick-link">
       <h3>Discord</h3>
-    </a>
+    </a> -->
   </section>
 
   <hr />
@@ -69,10 +90,18 @@
     <OpenMicCard
       venue="Monday Night Raw"
       time="Show time: 7:30 PM"
-      signup="7:00 PM"
+      signup="Sign-up: 7:00 PM"
       host="Sammy Dice Jr."
-      description="Madison's newest open mic featuring the antics of comedian/faux-magician Sammy Dice Jr."
+      description="This chaotic mic at Red Rooster features the unpolished antics of comedian/faux-magician Sammy Dice Jr."
       image={rooster}
+    />
+    <OpenMicCard
+      venue="Tiny Mic Mondays"
+      time="Show time: 9:00 PM"
+      signup="Sign-up: 8:30 PM"
+      host="Chuky Razo"
+      description="Madison's newest open mic at Tiny's Tap House over in the Willy St. neighborhood."
+      image={tinys}
     />
   </section>
 
@@ -83,7 +112,7 @@
     <OpenMicCard
       venue="The Argus Underground"
       time="Show time: 8:00 PM"
-      signup="7:30 PM"
+      signup="Sign-up: 7:30 PM"
       host="Ben O'Connell"
       description="The Argus open mic has been a staple in the Madison comedy scene for over a decade."
       image={argus}
@@ -111,7 +140,7 @@
     <OpenMicCard
       venue="The Revolver at Rigby"
       time="Show time: 8:00 PM"
-      signup="7:30 PM"
+      signup="Sign-up: 7:30 PM"
       host=""
       description="Every week a new host picks a theme or gimmick for the comics to prepare for. The theme is posted ahead of time day-of on the Facebook group. Past themes have included 'Yo mama' jokes, Roast Mic, Random Wikipedia Article, Ohio, and tons more."
       image={rigby}
@@ -140,6 +169,12 @@
     width: 100%;
     max-width: 600px;
     margin: 40px auto;
+  }
+
+  .facebook-link {
+    color: #1877f2;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   table {
