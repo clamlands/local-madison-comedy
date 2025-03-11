@@ -1,4 +1,4 @@
-<script>
+  <script>
   import { PUBLIC_GOOGLE_SHEETS_KEY } from '$env/static/public';
   import ComicCard from './ComicCard.svelte';
   import SubmitCard from './SubmitCard.svelte';
@@ -23,17 +23,28 @@
       if (i === 0) {
         return;
       }
+      
+      // Helper function to ensure URLs have proper protocol
+      const formatUrl = (url) => {
+        if (!url) return url;
+        url = url.trim();
+        if (!url.startsWith('http://') && !url.startsWith('https://')) {
+          return `https://${url}`;
+        }
+        return url;
+      };
+
       let comicObj = {
         headshot: row[1],
         name: row[2],
         bio: row[3],
-        insta: row[4],
+        insta: formatUrl(row[4]),
         email: row[5],
-        facebook: row[6],
-        youtube: row[7],
-        website: row[8],
-        clip: row[9],
-        tiktok: row[10],
+        facebook: formatUrl(row[6]),
+        youtube: formatUrl(row[7]),
+        website: formatUrl(row[8]),
+        clip: formatUrl(row[9]),
+        tiktok: formatUrl(row[10]),
       };
       comicObjectArray.push(comicObj);
     });
