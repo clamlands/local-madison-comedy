@@ -102,6 +102,7 @@
       host="Chuky Razo"
       description="Madison's newest open mic at Tiny's Tap House over in the Willy St. neighborhood."
       image={tinys}
+      flip={true}
     />
   </section>
 
