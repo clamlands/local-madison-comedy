@@ -20,7 +20,7 @@
     <img src={`https://drive.google.com/thumbnail?id=${imgId}&sz=w1000`} alt={name} />
   </div>
   <div class="details">
-    <h3>{name}</h3>
+    <h2>{name}</h2>
     <div class="bio-container">
       <div class="bio">{displayedBio}</div>
       {#if shouldTruncate}
@@ -73,7 +73,7 @@
     flex: 1;
   }
 
-  h3 {
+  h2 {
     margin: 0;
     font-size: 1.4rem;
   }

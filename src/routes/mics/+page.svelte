@@ -1,9 +1,9 @@
 <script>
   import state from '$lib/images/mics/state.webp';
-  import argus from '$lib/images/mics/argus.jpg';
-  import rigby from '$lib/images/mics/rigby.jpg';
-  import rooster from '$lib/images/mics/rooster.jpg';
-  import tinys from '$lib/images/mics/tinys.jpg';
+  import argus from '$lib/images/mics/argus-750.webp';
+  import rigby from '$lib/images/mics/rigby-750.webp';
+  import rooster from '$lib/images/mics/rooster-750.webp';
+  import tinys from '$lib/images/mics/tinys.webp';
   import OpenMicCard from './OpenMicCard.svelte';
 </script>
 
@@ -69,7 +69,7 @@
       rel="noreferrer"
       class="quick-link"
     >
-      <h3>Join Facebook Group</h3>
+      <div>Join Facebook Group</div>
     </a>
     <a
       href="https://instagram.com/madisoncomedy"
@@ -77,7 +77,7 @@
       rel="noreferrer"
       class="quick-link"
     >
-      <h3>Instagram</h3>
+      <div>Instagram</div>
     </a>
     <!-- <a href="https://instagram.com/madisoncomedy" class="quick-link">
       <h3>Discord</h3>

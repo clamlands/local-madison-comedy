@@ -15,33 +15,33 @@
   import josh from '$lib/images/homepage/t11.webp';
 
   import { fade } from 'svelte/transition';
-  import { onDestroy } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
 
   const allScenePhotos = [
-    // {
-    //   src: BenDan,
-    //   alt: "Ben O'Connell and Dan Gantman at the Rigby",
-    //   caption: "Ben O'Connell and Dan Gantman at the Rigby",
-    //   order: 1, // Add fixed order
-    // },
-    // {
-    //   src: Dick11,
-    //   alt: 'Owen Joyner and Rory Rusch at Madisons',
-    //   caption: 'Owen Joyner and Rory Rusch at Madisons',
-    //   order: 2,
-    // },
-    // {
-    //   src: Kayla,
-    //   alt: 'Kayla Ruth at Atlas Improv',
-    //   caption: 'Kayla Ruth at Atlas Improv',
-    //   order: 3,
-    // },
-    // {
-    //   src: SitDown,
-    //   alt: 'Eli Wilz at Rigby',
-    //   caption: 'Eli Wilz at Rigby',
-    //   order: 4,
-    // },
+    {
+      src: BenDan,
+      alt: "Ben O'Connell and Dan Gantman at The Rigby",
+      caption: "Ben O'Connell and Dan Gantman at The Rigby",
+      order: 1, // Add fixed order
+    },
+    {
+      src: Dick11,
+      alt: 'Owen Joyner and Rory Rusch at Madisons',
+      caption: 'Owen Joyner and Rory Rusch at Madisons',
+      order: 2,
+    },
+    {
+      src: Kayla,
+      alt: 'Kayla Ruth at Atlas Improv',
+      caption: 'Kayla Ruth at Atlas Improv',
+      order: 3,
+    },
+    {
+      src: SitDown,
+      alt: 'Eli Wilz at The Rigby',
+      caption: 'Eli Wilz at The Rigby',
+      order: 4,
+    },
     {
       src: craig,
       alt: 'Craig Smith at Crucible',
@@ -92,26 +92,46 @@
     },
   ];
 
-  function getRandomPhotos() {
-    const currentTime = Date.now();
-    const rotationPeriod = Math.floor(currentTime / 5000) % (allScenePhotos.length - 2);
-    return allScenePhotos.slice(rotationPeriod, rotationPeriod + 3);
+  // function getRandomPhotos() {
+  //   const currentTime = Date.now();
+  //   const rotationPeriod = Math.floor(currentTime / 5000) % (allScenePhotos.length - 2);
+
+  //   return allScenePhotos.slice(rotationPeriod, rotationPeriod + 3);
+  // }
+
+  // let displayedPhotos = getRandomPhotos();
+
+  // function shufflePhotos() {
+  //   displayedPhotos = getRandomPhotos();
+  // }
+
+  // const interval = setInterval(shufflePhotos, 15000);
+  // onDestroy(() => clearInterval(interval));
+
+  let displayedPhotos = $state([]);
+
+  //waits for browser execution to avoid hydration issues
+  import { browser } from '$app/environment';
+  if (browser) {
+    shufflePhotos();
   }
 
-  let displayedPhotos = getRandomPhotos();
+  let interval = setInterval(shufflePhotos, 10000);
 
   function shufflePhotos() {
-    displayedPhotos = getRandomPhotos();
+    let copy = [...allScenePhotos];
+    let selected = [];
+    for (let i = 0; i < 3; i++) {
+      let index = Math.floor(Math.random() * copy.length);
+      selected.push(copy.splice(index, 1)[0]); // Remove and store item
+    }
+    displayedPhotos = [...selected];
   }
-
-  const interval = setInterval(shufflePhotos, 50000);
-  onDestroy(() => clearInterval(interval));
 </script>
 
 <section class="hero">
-  <h1 class="neon-title">Madison Comedy</h1>
-  <p class="tagline">Madison, WI</p>
-  <p>Your Guide to Local Comedy</p>
+  <h1 class="neon-title">Madison Laughs</h1>
+  <p class="tagline">Your Guide to the Madison, WI Comedy Scene</p>
 </section>
 
 <section class="quick-links-container">
@@ -137,7 +157,7 @@
 
 <section class="photo-gallery">
   <div class="gallery-grid">
-    {#each displayedPhotos as photo (photo.src)}
+    {#each displayedPhotos as photo}
       <div class="photo-frame" in:fade>
         <img src={photo.src} alt={photo.alt} />
         <div class="caption">{photo.caption}</div>

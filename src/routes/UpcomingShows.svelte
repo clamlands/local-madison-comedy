@@ -125,9 +125,8 @@
   <h2 class="upcoming">Upcoming Shows</h2>
   <p class="other-shows">
     Here are SOME of the upcoming shows for which tickets can be bought on Eventbrite.
-    Also check out shows run by entities such as 1Motion Out Reach Enterprise, Don't Tell:
-    Madison, and
-    <a href="/shows">more</a>.
+    Also check out the <a href="/shows">Shows</a> page for a full list of shows including those
+    run by entities such as 1Motion Out Reach Enterprise, Don't Tell: Madison, and more.
   </p>
   {#if curatedEventsArray.length === 0}
     <h2>Loading upcoming shows...</h2>

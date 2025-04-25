@@ -8,10 +8,15 @@ html {
   overflow-y: scroll;
 }
 
-@font-face {
+/* @font-face {
   font-family: Ubuntu;
   src: url($lib/fonts/Ubuntu.woff2);
 }
+
+@font-face {
+  font-family: Vibur;
+  src: url($lib/fonts/Vibur-Regular.woff2);
+} */
 
 /* @font-face {
       font-family: CrimsonText;
@@ -22,11 +27,6 @@ html {
       font-family: Sacramento;
       src: url($lib/fonts/Sacramento-Regular.ttf);
     } */
-
-@font-face {
-  font-family: Vibur;
-  src: url($lib/fonts/Vibur-Regular.woff2);
-}
 
 /* @font-face {
       font-family: Exo2;

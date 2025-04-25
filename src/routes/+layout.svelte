@@ -8,6 +8,12 @@
   const currentPath = $derived($page.url.pathname);
 </script>
 
+<svelte:head>
+  <meta name="description" content="Your guide to the Madison, WI comedy scene." />
+  <title>Madison Laughs</title>
+  <link rel="stylesheet preload" href="fonts.css" as="style" />
+</svelte:head>
+
 <header>
   <nav>
     <a href="/" class:active={currentPath === '/'}>Home</a>

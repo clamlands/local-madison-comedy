@@ -1,15 +1,15 @@
 <script>
   import ShowCard from './ShowCard.svelte';
-  import ccc from '$lib/images/shows/ccc.png';
-  import cch from '$lib/images/shows/cch.png';
-  import silly from '$lib/images/shows/silly.png';
-  import cabaret from '$lib/images/shows/cabaret.png';
-  import donttell from '$lib/images/shows/donttell.png';
-  import donttellIcon from '$lib/images/icons/donttell-icon.png';
-  import oneMotion from '$lib/images/shows/1motion.png';
+  import ccc from '$lib/images/shows/ccc-750.webp';
+  import cch from '$lib/images/shows/cch-750.webp';
+  import silly from '$lib/images/shows/silly-750.webp';
+  import cabaret from '$lib/images/shows/cabaret.webp';
+  import donttell from '$lib/images/shows/donttell-750.webp';
+  import oneMotion from '$lib/images/shows/1motion-750.webp';
 
   import cccIcon from '$lib/images/icons/ccc.png';
   import insta from '$lib/images/icons/ig.png';
+  import donttellIcon from '$lib/images/icons/donttell-icon.png';
   import cchIcon from '$lib/images/icons/cch-icon.png';
 </script>
 

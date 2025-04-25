@@ -3,9 +3,9 @@ extra
 -->
 <script>
   import ExtraCard from './ExtraCard.svelte';
-  import dirtynerd from '$lib/images/extra/dirtynerd.jpg';
+  import dirtynerd from '$lib/images/extra/dirtynerd.webp';
   import charlie from '$lib/images/extra/charlie.webp';
-  import chuky from '$lib/images/extra/chuky.jpg';
+  import chuky from '$lib/images/extra/chuky.webp';
   import youtube from '$lib/images/icons/youtube.png';
   import apple from '$lib/images/icons/apple.png';
   import applePod from '$lib/images/icons/applepod.png';
@@ -13,15 +13,15 @@ extra
   import spotify from '$lib/images/icons/spotify.png';
   import bandcamp from '$lib/images/icons/bandcamp.png';
   import atlasLogo from '$lib/images/extra/atlaslogo-white.png';
-  import atlas from '$lib/images/extra/atlas.jpg';
+  import atlas from '$lib/images/extra/atlas-750.webp';
   import atlasIcon from '$lib/images/icons/atlas-icon.png';
   import web from '$lib/images/icons/www.webp';
   import mbi from '$lib/images/extra/mbi-background.webp';
   import mbiLogo from '$lib/images/icons/mbi.png';
-  import mbiGroup from '$lib/images/extra/mbi-group.webp';
-  import pitchpit from '$lib/images/extra/pitchpit.jpg';
-  import cch from '$lib/images/extra/cch.png';
-  import mcw from '$lib/images/extra/mcw.jpg';
+  import mbiGroup from '$lib/images/extra/mbi-group-750.webp';
+  import pitchpit from '$lib/images/extra/pitchpit-750.webp';
+  import cch from '$lib/images/extra/cch-750.webp';
+  import mcw from '$lib/images/extra/mcw.webp';
 
   const sections = [
     {
@@ -63,7 +63,7 @@ extra
     {#each sections as { id, title, icon }}
       <a href="#{id}" class="quick-link">
         <span class="icon">{icon}</span>
-        <h3>{title}</h3>
+        <div>{title}</div>
       </a>
     {/each}
   </nav>
