@@ -29,7 +29,7 @@
         description:
           'Widely considered to be one of the best open mics in the country, The Mic on State regularly attracts crowds of over 200 people. Upwards of 60 people sign up each week in hopes of getting one of the 20 available spots.',
         image: state,
-        time: '9:00 PM',
+        time: '8:00 PM',
         signup: 'madisoncomedy.com',
         flip: true,
       },
