@@ -51,7 +51,7 @@
         <tr>
           <td>Wednesday</td>
           <td>Comedy on State</td>
-          <td>9:00 PM</td>
+          <td>8:00 PM</td>
         </tr>
         <tr>
           <td>Thursday</td>
@@ -127,7 +127,7 @@
     <OpenMicCard
       venue="The Mic on State"
       time="Show time: 8:00 PM"
-      signup="Sign-up online at <a href='https://www.madisoncomedy.com/open-mic/' target='_blank' rel='noreferrer'>madisoncomedy.com</a> from noon to 7 PM on Wednesdays."
+      signup="Sign-up online noon-6pm <a href='https://www.madisoncomedy.com/open-mic/' target='_blank' rel='noreferrer'>madisoncomedy.com</a> from noon to 7 PM on Wednesdays."
       host=""
       description="Widely considered to be one of the best open mics in the country, The Mic on State regularly attracts crowds of over 200 people. Upwards of 60 people sign up each week in hopes of getting one of the 20 available spots."
       image={state}
