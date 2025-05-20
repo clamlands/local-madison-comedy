@@ -8,7 +8,7 @@
   let googleFormLink = "https://docs.google.com/forms/d/1DbMbAg9aeb0GxORsmjl5nS712dhYw_9fT6ia-6dP6FY/edit"; // Replace with your actual Google Form URL
   
   // Instagram hashtag to display
-  let instagramHashtag = "madisonlaughsjoke";
+  let instagramHashtag = "madisonlaughs";
 </script>
 
 <svelte:head>
