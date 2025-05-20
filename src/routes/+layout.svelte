@@ -20,6 +20,7 @@
     <a href="/mics" class:active={currentPath === '/mics'}>Open Mics</a>
     <a href="/shows" class:active={currentPath === '/shows'}>Shows</a>
     <a href="/comics" class:active={currentPath === '/comics'}>Comics</a>
+    <a href="/joke-of-the-week" class:active={currentPath === '/joke-of-the-week'}>Joke of the Week</a>
     <a href="/extra" class:active={currentPath === '/extra'}>Extra</a>
   </nav>
 </header>
