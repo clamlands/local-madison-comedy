@@ -161,7 +161,16 @@
     color: #fff;
     font-size: 80px;
     font-weight: 400;
-    animation: pulsate 1s infinite alternate;
+    /* animation: pulsate 1s infinite alternate; */
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px var(--neon2),
+      0 0 45px var(--neon2),
+      0 0 55px var(--neon2),
+      0 0 70px var(--neon2),
+      0 0 80px var(--neon2);
     margin: 50px 0 60px;
     text-align: center;
   }

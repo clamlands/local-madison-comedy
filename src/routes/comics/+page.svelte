@@ -1,4 +1,4 @@
-  <script>
+<script>
   import { PUBLIC_GOOGLE_SHEETS_KEY } from '$env/static/public';
   import ComicCard from './ComicCard.svelte';
   import SubmitCard from './SubmitCard.svelte';
@@ -23,7 +23,7 @@
       if (i === 0) {
         return;
       }
-      
+
       // Helper function to ensure URLs have proper protocol
       const formatUrl = (url) => {
         if (!url) return url;
@@ -140,11 +140,20 @@
     color: #fff;
     font-size: 75px;
     font-weight: 400;
-    animation: pulsate-title 1s infinite alternate;
+    /* animation: pulsate-title 1s infinite alternate; */
     border: 0.2rem solid #fff;
     border-radius: 2rem;
     padding: 30px 50px;
     margin-bottom: 40px;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px var(--neon),
+      0 0 45px var(--neon),
+      0 0 55px var(--neon),
+      0 0 70px var(--neon),
+      0 0 80px var(--neon);
     box-shadow:
       0 0 0.2rem #fff,
       0 0 0.2rem #fff,

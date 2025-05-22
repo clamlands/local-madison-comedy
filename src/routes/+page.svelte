@@ -176,11 +176,20 @@
     color: #fff;
     font-size: 6.2rem;
     font-weight: 400;
-    animation: pulsate 1s infinite alternate;
+    /* animation: pulsate 1s infinite alternate; */
     border: 0.2rem solid #fff;
     border-radius: 2rem;
     padding: 30px 50px;
     margin-bottom: 40px;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px var(--neon),
+      0 0 45px var(--neon),
+      0 0 55px var(--neon),
+      0 0 70px var(--neon),
+      0 0 80px var(--neon);
     box-shadow:
       0 0 0.2rem #fff,
       0 0 0.2rem #fff,
