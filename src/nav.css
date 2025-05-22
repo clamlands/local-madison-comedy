@@ -1,7 +1,7 @@
 /* ----------- MOBILE -----------*/
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
   position: sticky;
@@ -15,49 +15,42 @@ header {
   background-color: var(--dark-background);
 }
 
+h1 {
+  margin: 0;
+  font-family: Vibur;
+}
+
 nav a {
   text-decoration: none;
   color: var(--text);
-  padding: 5px 10px;
-  border-radius: 4px;
   transition: background-color 0.2s ease;
   box-shadow: none;
 }
 
-nav a.active {
-  background-color: rgba(255, 255, 255, 0.1);
-  font-weight: 500;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: none;
-}
-
-/* for when the burger menu is set up */
-/* nav {
+header nav {
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  gap: 15px;
   position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
-  padding: 36px 0 0 36px;
+  padding: 46px 0 0 36px;
   transition: ease-out 0.25s;
   left: -100vw;
-} */
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 36px 0;
+  background-color: var(--dark-background);
   transition: ease-out 0.25s;
 }
 
-.menu.open {
+a.active {
+  background-color: inherit;
+  color: var(--neon);
+  font-weight: bold;
+}
+
+nav.open {
   left: 0;
 }
 
@@ -68,6 +61,8 @@ nav {
   flex-flow: column nowrap;
   justify-content: space-around;
   z-index: 2;
+  background-color: var(--dark-background);
+  border: none;
 }
 
 .burger-bar {
@@ -103,6 +98,14 @@ nav {
 
 /* ----------- DESKTOP -----------*/
 @media (min-width: 768px) {
+  header {
+    justify-content: center;
+  }
+
+  .desktop-hide {
+    display: none;
+  }
+
   .burger {
     display: none;
   }
@@ -115,12 +118,33 @@ nav {
     background-color: rgba(255, 255, 255, 0.05);
   }
 
-  nav {
+  nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+  }
+
+  a.active {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  header nav {
     display: flex;
     flex-flow: row wrap;
     width: auto;
     height: auto;
     position: static;
     padding: 0;
+    font-size: 16px;
+    background-color: inherit;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    box-shadow: none;
   }
 }

@@ -6,6 +6,12 @@
   let { children } = $props();
 
   const currentPath = $derived($page.url.pathname);
+
+  let mobileNavOpen = $state(false);
+
+  function toggleMobileNav() {
+    mobileNavOpen = !mobileNavOpen;
+  }
 </script>
 
 <svelte:head>
@@ -15,13 +21,61 @@
 </svelte:head>
 
 <header>
-  <nav>
-    <a href="/" class:active={currentPath === '/'}>Home</a>
-    <a href="/mics" class:active={currentPath === '/mics'}>Open Mics</a>
-    <a href="/shows" class:active={currentPath === '/shows'}>Shows</a>
-    <a href="/comics" class:active={currentPath === '/comics'}>Comics</a>
-    <a href="/joke-of-the-week" class:active={currentPath === '/joke-of-the-week'}>Joke of the Week</a>
-    <a href="/extra" class:active={currentPath === '/extra'}>Extra</a>
+  <h1 class="desktop-hide">Madison Laughs</h1>
+  <button
+    class="burger"
+    aria-label="Toggle mobile navigation"
+    onclick={() => {
+      toggleMobileNav();
+    }}
+  >
+    <div class={`burger-bar ${mobileNavOpen ? 'open' : 'closed'}`}></div>
+    <div class={`burger-bar ${mobileNavOpen ? 'open' : 'closed'}`}></div>
+    <div class={`burger-bar ${mobileNavOpen ? 'open' : 'closed'}`}></div>
+  </button>
+  <nav class={`${mobileNavOpen ? 'open' : 'closed'}`}>
+    <a
+      href="/"
+      class:active={currentPath === '/'}
+      onclick={() => {
+        toggleMobileNav();
+      }}>Home</a
+    >
+    <a
+      href="/mics"
+      class:active={currentPath === '/mics'}
+      onclick={() => {
+        toggleMobileNav();
+      }}>Open Mics</a
+    >
+    <a
+      href="/shows"
+      class:active={currentPath === '/shows'}
+      onclick={() => {
+        toggleMobileNav();
+      }}>Shows</a
+    >
+    <a
+      href="/comics"
+      class:active={currentPath === '/comics'}
+      onclick={() => {
+        toggleMobileNav();
+      }}>Comics</a
+    >
+    <a
+      href="/joke-of-the-week"
+      class:active={currentPath === '/joke-of-the-week'}
+      onclick={() => {
+        toggleMobileNav();
+      }}>Joke of the Week</a
+    >
+    <a
+      href="/extra"
+      class:active={currentPath === '/extra'}
+      onclick={() => {
+        toggleMobileNav();
+      }}>Extra</a
+    >
   </nav>
 </header>
 
