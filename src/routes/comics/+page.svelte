@@ -57,8 +57,8 @@
   <section class="hero">
     <h1 class="neon-title">Comic Directory</h1>
     <p>
-      Saw a Madison-area comedian and liked what you saw? Below is a list of all the
-      stand-up comics in the scene.
+      Did you see a Madison-area comedian and like what you saw? Watch more from your
+      favorite comics and follow them here!
     </p>
   </section>
   <section class="comic-section">

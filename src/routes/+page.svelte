@@ -130,8 +130,8 @@
 </script>
 
 <section class="hero">
-  <h1 class="neon-title">Madison Laughs</h1>
-  <p class="tagline">Your Guide to the Madison, WI Comedy Scene</p>
+  <h1 class="neon-title">Madison Comedy</h1>
+  <h2 class="tagline">Your Guide to the Madison, WI Comedy Scene</h2>
 </section>
 
 <section class="quick-links-container">
@@ -142,15 +142,15 @@
     </a>
     <a href="/shows" class="quick-link">
       <span class="icon">🏟️</span>
-      <h3>Shows</h3>
+      <h3>Comedy Shows</h3>
     </a>
     <a href="/comics" class="quick-link">
       <span class="icon">🤡</span>
-      <h3>Comics</h3>
+      <h3>Local Comics</h3>
     </a>
     <a href="/extra" class="quick-link">
       <span class="icon">✳️</span>
-      <h3>Extra</h3>
+      <h3>Extra Content</h3>
     </a>
   </nav>
 </section>
@@ -400,5 +400,7 @@
 
   .tagline {
     color: white;
+    font-weight: inherit;
+    margin-bottom: 0;
   }
 </style>

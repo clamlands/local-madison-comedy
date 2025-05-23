@@ -85,7 +85,7 @@
     .to-eventbrite {
       margin-top: auto;
       text-align: center;
-      display: inline-block;
+      /* display: inline-block; */
       cursor: pointer;
       transition: all 0.25s ease;
     }

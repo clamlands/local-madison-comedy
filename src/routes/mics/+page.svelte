@@ -9,7 +9,7 @@
 
 <div class="open-mics-container">
   <section class="hero">
-    <h1 class="neon-title">Weekly Open Mics</h1>
+    <h1 class="neon-title">Stand-up Open Mics</h1>
     <div class="notice">
       <p>
         Stay tuned to the <a

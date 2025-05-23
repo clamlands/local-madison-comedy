@@ -14,7 +14,7 @@
 </script>
 
 <section class="hero">
-  <h1 class="neon-title">Stand-up Shows</h1>
+  <h1 class="neon-title">Comedy Shows</h1>
   <p>
     Madison’s comedy scene is packed with recurring shows every month, featuring stand-up,
     improv, and variety acts. Whether you're looking for a polished showcase or a

@@ -21,7 +21,9 @@
 </svelte:head>
 
 <header>
-  <h1 class="desktop-hide">Madison Laughs</h1>
+  <h1 class="header-title">
+    <a href="/">Madison Laughs</a>
+  </h1>
   <button
     class="burger"
     aria-label="Toggle mobile navigation"
