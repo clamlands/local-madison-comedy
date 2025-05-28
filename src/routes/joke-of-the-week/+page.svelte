@@ -2,11 +2,11 @@
   import { onMount } from 'svelte';
 
   // Weekly theme - to be updated manually each week
-  let weeklyTheme = 'The Ten Commandments if they were written by a Midwestern Pope';
+  let weeklyTheme = 'Jokes a person would write in their own Eulogy / Obituary';
 
   // Google Form link - update this URL when creating a new form
   let googleFormLink =
-    'https://docs.google.com/forms/d/1DbMbAg9aeb0GxORsmjl5nS712dhYw_9fT6ia-6dP6FY/edit'; // Replace with your actual Google Form URL
+    'https://docs.google.com/forms/d/1lUMNGxp2fIZzNINMb6lqEl8z-OTwSIyWrTp5_c4Vl58/'; // Replace with your actual Google Form URL
 
   // Instagram hashtag to display
   let instagramHashtag = 'madisonlaughs';
