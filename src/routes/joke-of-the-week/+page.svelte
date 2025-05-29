@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
 
   // Weekly theme - to be updated manually each week
-  let weeklyTheme = 'Signs Your'e Going to have a Bad Summer in Madison';
+  let weeklyTheme = 'Signs Youre Going to have a Bad Summer in Madison';
 
   // Google Form link - update this URL when creating a new form
   let googleFormLink =
