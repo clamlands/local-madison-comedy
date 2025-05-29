@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
 
   // Weekly theme - to be updated manually each week
-  let weeklyTheme = 'Jokes a person would write in their own Eulogy / Obituary';
+  let weeklyTheme = 'Signs Your'e Going to have a Bad Summer in Madison';
 
   // Google Form link - update this URL when creating a new form
   let googleFormLink =
