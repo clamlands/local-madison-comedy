@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
 
   // Weekly theme - to be updated manually each week
-  let weeklyTheme = 'Ways that You Unintentionally Celebrate Pride';
+  let weeklyTheme = 'Ways You Unintentionally Celebrated Pride';
 
   // Google Form link - update this URL when creating a new form
   let googleFormLink =
