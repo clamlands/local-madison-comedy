@@ -2,11 +2,11 @@
   import { onMount } from 'svelte';
 
   // Weekly theme - to be updated manually each week
-  let weeklyTheme = 'Signs Youre Going to have a Bad Summer in Madison';
+  let weeklyTheme = 'Ways that You Unintentionally Celebrate Pride';
 
   // Google Form link - update this URL when creating a new form
   let googleFormLink =
-    'https://docs.google.com/forms/d/1lUMNGxp2fIZzNINMb6lqEl8z-OTwSIyWrTp5_c4Vl58/'; // Replace with your actual Google Form URL
+    'https://docs.google.com/forms/d/1WMG7HJwW_A0km1NtvrG1n1JtZ4aEPCy9pTHjFlOsbys/'; // Replace with your actual Google Form URL
 
   // Instagram hashtag to display
   let instagramHashtag = 'madisonlaughs';
