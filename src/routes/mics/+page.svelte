@@ -3,6 +3,7 @@
   import argus from '$lib/images/mics/argus-750.webp';
   import rigby from '$lib/images/mics/rigby-750.webp';
   import rooster from '$lib/images/mics/rooster-750.webp';
+  import dank from '$lib/images/mics/dank.webp';
   import tinys from '$lib/images/mics/tinys.webp';
   import OpenMicCard from './OpenMicCard.svelte';
 </script>
@@ -34,14 +35,14 @@
       </thead>
       <tbody>
         <tr>
-          <td>Monday</td>
-          <td>Red Rooster</td>
-          <td>7:30 PM</td>
+          <td>Sunday</td>
+          <td>Dank of America</td>
+          <td><em>Starts July 13th</em></td>
         </tr>
         <tr>
           <td>Monday</td>
-          <td>Tiny's Tap House</td>
-          <td>9:00 PM</td>
+          <td>Red Rooster</td>
+          <td>7:30 PM</td>
         </tr>
         <tr>
           <td>Tuesday</td>
@@ -85,6 +86,18 @@
   </section>
 
   <hr />
+
+  <h2>Sunday</h2>
+    <OpenMicCard
+      venue="The Joint Custody Mic at Dank of America"
+      time="Show time: 6:00 PM"
+      signup="Sign-up: 5:30 PM"
+      host="Randy Miranda"
+      description="Madison's newest Open Mic, and the only one held at a weed shop. Join us every Sunday to answer the question thats on everybodies mind: how is this legal?"
+      image={dank}
+    />
+
+  <hr />
   <section class="day-section">
     <h2>Monday</h2>
     <OpenMicCard
@@ -94,15 +107,6 @@
       host="Sammy Dice Jr."
       description="This chaotic mic at Red Rooster features the unpolished antics of comedian/faux-magician Sammy Dice Jr."
       image={rooster}
-    />
-    <OpenMicCard
-      venue="Tiny Mic Mondays"
-      time="Show time: 9:00 PM"
-      signup="Sign-up: 8:30 PM"
-      host="Chuky Razo"
-      description="Madison's newest open mic at Tiny's Tap House over in the Willy St. neighborhood."
-      image={tinys}
-      flip={true}
     />
   </section>
 
