@@ -2,11 +2,11 @@
   import { onMount } from 'svelte';
 
   // Weekly theme - to be updated manually each week
-  let weeklyTheme = 'Ways You Unintentionally Celebrated Pride';
+  let weeklyTheme = 'Ironic Ways to Celebrate American Independence';
 
   // Google Form link - update this URL when creating a new form
   let googleFormLink =
-    'https://docs.google.com/forms/d/1WMG7HJwW_A0km1NtvrG1n1JtZ4aEPCy9pTHjFlOsbys/'; // Replace with your actual Google Form URL
+    'https://docs.google.com/forms/d/e/1FAIpQLSehjU2cP7dZshtnbalGIw3kDNCG7BMJcOccdyU2SGvs73T6Zw/viewform?usp=header'; // Replace with your actual Google Form URL
 
   // Instagram hashtag to display
   let instagramHashtag = 'madisonlaughs';
