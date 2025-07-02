@@ -40,11 +40,6 @@
           <td><em>Starts July 13th</em></td>
         </tr>
         <tr>
-          <td>Monday</td>
-          <td>Red Rooster</td>
-          <td>7:30 PM</td>
-        </tr>
-        <tr>
           <td>Tuesday</td>
           <td>Argus BarGrille</td>
           <td>8:00 PM</td>
@@ -99,20 +94,6 @@
 
   <hr />
   <section class="day-section">
-    <h2>Monday</h2>
-    <OpenMicCard
-      venue="Monday Night Raw"
-      time="Show time: 7:30 PM"
-      signup="Sign-up: 7:00 PM"
-      host="Sammy Dice Jr."
-      description="This chaotic mic at Red Rooster features the unpolished antics of comedian/faux-magician Sammy Dice Jr."
-      image={rooster}
-    />
-  </section>
-
-  <hr />
-
-  <section class="day-section">
     <h2>Tuesday</h2>
     <OpenMicCard
       venue="The Argus Underground"
@@ -153,7 +134,7 @@
   </section>
   <hr />
   <p class="no-mics">
-    There are no regularly scheduled mics on Friday, Saturday, or Sunday. Go catch a
+    There are no regularly scheduled mics on Friday or SaturdayGo catch a
     weekend show instead!
   </p>
 </div>
