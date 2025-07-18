@@ -37,7 +37,7 @@
         <tr>
           <td>Sunday</td>
           <td>Dank of America</td>
-          <td><em>Starts July 13th</em></td>
+          <td><em>6:00PM</em></td>
         </tr>
         <tr>
           <td>Tuesday</td>
