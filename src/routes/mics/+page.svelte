@@ -4,7 +4,7 @@
   import rigby from '$lib/images/mics/rigby-750.webp';
   import rooster from '$lib/images/mics/rooster-750.webp';
   import dank from '$lib/images/mics/dank.webp';
-  import tinys from '$lib/images/mics/tinys.webp';
+  import cbi from '$lib/images/mics/cbi.webp';
   import OpenMicCard from './OpenMicCard.svelte';
 </script>
 
@@ -37,12 +37,17 @@
         <tr>
           <td>Sunday</td>
           <td>Dank of America</td>
-          <td><em>6:00PM</em></td>
+          <td>6:00PM</td>
         </tr>
         <tr>
           <td>Tuesday</td>
           <td>Argus BarGrille</td>
           <td>8:00 PM</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Come Back In</td>
+          <td>9:30 PM</td>
         </tr>
         <tr>
           <td>Wednesday</td>
@@ -100,8 +105,17 @@
       time="Show time: 8:00 PM"
       signup="Sign-up: 7:30 PM"
       host="Ben O'Connell"
-      description="The Argus open mic has been a staple in the Madison comedy scene for over a decade."
+      description="Madison's longest running open mic, The Argus open mic has been a staple in the Madison comedy scene for over a decade."
       image={argus}
+    />
+    <OpenMicCard
+      venue="The Come Back In Mic"
+      time="Show time: 9:30 PM"
+      signup="Sign-up: 9:00 PM"
+      host="Joey Schaefer"
+      description="A welcoming open mic featuring rotating hosts and 5-minute sets. Perfect for both new and seasoned comedians looking to work on their material in a supportive environment."
+      image={cbi}
+      flip={true}
     />
   </section>
 

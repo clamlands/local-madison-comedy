@@ -65,13 +65,6 @@
       }}>Comics</a
     >
     <a
-      href="/joke-of-the-week"
-      class:active={currentPath === '/joke-of-the-week'}
-      onclick={() => {
-        toggleMobileNav();
-      }}>Joke of the Week</a
-    >
-    <a
       href="/extra"
       class:active={currentPath === '/extra'}
       onclick={() => {
