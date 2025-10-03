@@ -4,7 +4,6 @@
   import rigby from '$lib/images/mics/rigby-750.webp';
   import rooster from '$lib/images/mics/rooster-750.webp';
   import dank from '$lib/images/mics/dank.webp';
-  import cbi from '$lib/images/mics/cbi.webp';
   import OpenMicCard from './OpenMicCard.svelte';
 </script>
 
@@ -36,18 +35,18 @@
       <tbody>
         <tr>
           <td>Sunday</td>
-          <td>Dank of America</td>
+          <td>Dank of America - Willy St</td>
           <td>6:00PM</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Dank of America - E Springs Dr</td>
+          <td>8:00 PM</td>
         </tr>
         <tr>
           <td>Tuesday</td>
           <td>Argus BarGrille</td>
           <td>8:00 PM</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-          <td>Come Back In</td>
-          <td>9:30 PM</td>
         </tr>
         <tr>
           <td>Wednesday</td>
@@ -93,7 +92,18 @@
       time="Show time: 6:00 PM"
       signup="Sign-up: 5:30 PM"
       host="Randy Miranda"
-      description="Madison's newest Open Mic, and the only one held at a weed shop. Join us every Sunday to answer the question thats on everybodies mind: how is this legal?"
+      description="Oct 5th held at E Springs Dr, Oct 12 on Willy St. Will be on Willy St after Oct 13th."
+      image={dank}
+    />
+
+  <hr />
+  <h2>Monday</h2>
+    <OpenMicCard
+      venue="Dank of America Monday Mic*"
+      time="Show time: 8:00 PM"
+      signup="Sign-up: 7:30 PM"
+      host=""
+      description="*Starts Oct 13th* Join us at the 2358 E Springs Dr location another night of comedy at Madison's favorite weed shop. Monday nights bring a different energy to the stage with fresh material and new faces."
       image={dank}
     />
 
@@ -107,15 +117,6 @@
       host="Ben O'Connell"
       description="Madison's longest running open mic, The Argus open mic has been a staple in the Madison comedy scene for over a decade."
       image={argus}
-    />
-    <OpenMicCard
-      venue="The Come Back In Mic"
-      time="Show time: 9:30 PM"
-      signup="Sign-up: 9:00 PM"
-      host="Joey Schaefer"
-      description="A welcoming open mic featuring rotating hosts and 5-minute sets. Perfect for both new and seasoned comedians looking to work on their material in a supportive environment."
-      image={cbi}
-      flip={true}
     />
   </section>
 
