@@ -92,18 +92,18 @@
       time="Show time: 6:00 PM"
       signup="Sign-up: 5:30 PM"
       host="Randy Miranda"
-      description="Madison's newest Open Mic, held at Dank of America's Willy St location and the only one held at a weed shop. Join us every Sunday to answer the question thats on everybodies mind: how is this legal?"
+      description="Oct 5th held at E Springs Dr, Oct 12 on Willy St. Will be on Willy St after Oct 13th."
       image={dank}
     />
 
   <hr />
   <h2>Monday</h2>
     <OpenMicCard
-      venue="Dank of America Monday Mic"
+      venue="Dank of America Monday Mic*"
       time="Show time: 8:00 PM"
       signup="Sign-up: 7:30 PM"
       host=""
-      description="Join us at the 2358 E Springs Dr location another night of comedy at Madison's favorite weed shop. Monday nights bring a different energy to the stage with fresh material and new faces."
+      description="*Starts Oct 13th* Join us at the 2358 E Springs Dr location another night of comedy at Madison's favorite weed shop. Monday nights bring a different energy to the stage with fresh material and new faces."
       image={dank}
     />
 
