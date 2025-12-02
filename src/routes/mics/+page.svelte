@@ -39,11 +39,6 @@
           <td>6:00PM</td>
         </tr>
         <tr>
-          <td>Monday</td>
-          <td>Dank of America - E Springs Dr</td>
-          <td>8:00 PM</td>
-        </tr>
-        <tr>
           <td>Tuesday</td>
           <td>Argus BarGrille</td>
           <td>8:00 PM</td>
@@ -96,16 +91,6 @@
       image={dank}
     />
 
-  <hr />
-  <h2>Monday</h2>
-    <OpenMicCard
-      venue="Dank of America Monday Mic*"
-      time="Show time: 8:00 PM"
-      signup="Sign-up: 7:30 PM"
-      host=""
-      description="*Starts Oct 13th* Join us at the 2358 E Springs Dr location another night of comedy at Madison's favorite weed shop. Monday nights bring a different energy to the stage with fresh material and new faces."
-      image={dank}
-    />
 
   <hr />
   <section class="day-section">
